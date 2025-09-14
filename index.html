@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniCarreras Ecuador - Portal de Carreras Universitarias</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>UniCarreras Ecuador</h1>
+            </div>
+            <nav class="nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#carreras">Carreras</a>
+                <a href="#universidades">Universidades</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h2>Descubre tu futuro académico</h2>
+            <p>Encuentra información completa y actualizada sobre las carreras universitarias disponibles en Ecuador</p>
+            <button class="cta-button" onclick="document.getElementById('search').scrollIntoView({behavior: 'smooth'})">
+                Explorar Carreras
+            </button>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-number" id="carrerasCount">150+</span>
+                <span class="stat-label">Carreras</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" id="universidadesCount">50+</span>
+                <span class="stat-label">Universidades</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" id="ciudadesCount">20+</span>
+                <span class="stat-label">Ciudades</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section" id="search">
+        <div class="container">
+            <h3>Busca la carrera perfecta para ti</h3>
+            <div class="search-container">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar carreras (ej: Medicina, Ingeniería...)">
+                </div>
+                <div class="filters">
+                    <select id="areaFilter">
+                        <option value="">Todas las áreas</option>
+                        <option value="ciencias-salud">Ciencias de la Salud</option>
+                        <option value="ingenieria">Ingeniería y Tecnología</option>
+                        <option value="ciencias-sociales">Ciencias Sociales</option>
+                        <option value="arte-humanidades">Arte y Humanidades</option>
+                        <option value="ciencias-naturales">Ciencias Naturales</option>
+                        <option value="educacion">Educación</option>
+                        <option value="economia-negocios">Economía y Negocios</option>
+                    </select>
+                    <select id="ciudadFilter">
+                        <option value="">Todas las ciudades</option>
+                        <option value="quito">Quito</option>
+                        <option value="guayaquil">Guayaquil</option>
+                        <option value="cuenca">Cuenca</option>
+                        <option value="ambato">Ambato</option>
+                        <option value="riobamba">Riobamba</option>
+                        <option value="loja">Loja</option>
+                        <option value="machala">Machala</option>
+                        <option value="portoviejo">Portoviejo</option>
+                    </select>
+                    <select id="modalidadFilter">
+                        <option value="">Todas las modalidades</option>
+                        <option value="presencial">Presencial</option>
+                        <option value="semipresencial">Semipresencial</option>
+                        <option value="virtual">Virtual</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section" id="carreras">
+        <div class="container">
+            <div class="results-header">
+                <h3>Resultados de búsqueda</h3>
+                <span class="results-count" id="resultsCount">Mostrando todas las carreras</span>
+            </div>
+            <div class="results-grid" id="resultsGrid">
+                <!-- Los resultados se cargarán dinámicamente -->
+            </div>
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h4>No se encontraron resultados</h4>
+                <p>Intenta ajustar tus filtros de búsqueda</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Universities Section -->
+    <section class="universities-section" id="universidades">
+        <div class="container">
+            <h3>Principales Universidades</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="university-logo">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h4>Universidad Central del Ecuador</h4>
+                    <p>Quito</p>
+                    <span class="university-type">Pública</span>
+                </div>
+                <div class="university-card">
+                    <div class="university-logo">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h4>Escuela Politécnica Nacional</h4>
+                    <p>Quito</p>
+                    <span class="university-type">Pública</span>
+                </div>
+                <div class="university-card">
+                    <div class="university-logo">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h4>Universidad de Guayaquil</h4>
+                    <p>Guayaquil</p>
+                    <span class="university-type">Pública</span>
+                </div>
+                <div class="university-card">
+                    <div class="university-logo">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h4>Universidad San Francisco de Quito</h4>
+                    <p>Quito</p>
+                    <span class="university-type">Privada</span>
+                </div>
+                <div class="university-card">
+                    <div class="university-logo">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h4>Universidad de Cuenca</h4>
+                    <p>Cuenca</p>
+                    <span class="university-type">Pública</span>
+                </div>
+                <div class="university-card">
+                    <div class="university-logo">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h4>Pontificia Universidad Católica del Ecuador</h4>
+                    <p>Quito</p>
+                    <span class="university-type">Privada</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <h3>¿Necesitas orientación?</h3>
+            <p>Nuestro equipo está aquí para ayudarte a encontrar la carrera perfecta para tu futuro</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@unicarrerasecuador.edu.ec</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+593 2 123-4567</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Lun - Vie: 8:00 AM - 6:00 PM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>UniCarreras Ecuador</h4>
+                    <p>Tu guía confiable para elegir la carrera universitaria perfecta en Ecuador</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces útiles</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#carreras">Carreras</a></li>
+                        <li><a href="#universidades">Universidades</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 UniCarreras Ecuador. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para detalles de carrera -->
+    <div class="modal" id="careerModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div class="modal-header" id="modalHeader">
+                <!-- Contenido del header se carga dinámicamente -->
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Contenido del modal se carga dinámicamente -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
