@@ -182,6 +182,25 @@ const carrerasData = [
     }
 ];
 
+  // Seleccionamos el contenedor
+  const inicio = document.getElementById("inicio");
+
+  // Sacamos las imágenes desde los <li><img>
+  const imagenes = Array.from(inicio.querySelectorAll("ul li img")).map(img => img.src);
+
+  let indice = 0;
+
+  // Función para cambiar el fondo
+  function cambiarFondo() {
+    inicio.style.backgroundImage = `url('${imagenes[indice]}')`;
+    indice = (indice + 1) % imagenes.length;
+  }
+
+  // Mostrar la primera imagen y empezar el cambio
+  cambiarFondo();
+  setInterval(cambiarFondo, 5000); // cambia cada 5 segundos
+
+
 // Variables globales
 let carrerasFiltradas = [...carrerasData];
 
