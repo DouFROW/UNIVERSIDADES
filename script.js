@@ -1,4 +1,9 @@
 // Base de datos simulada de carreras universitarias en Ecuador
+
+// =============================================
+// SECCIÓN 1: BASE DE DATOS DE CARRERAS
+// =============================================
+
 const carrerasData = [
     {
         id: 1,
@@ -10,7 +15,8 @@ const carrerasData = [
         duracion: "6 años",
         descripcion: "Formación integral de profesionales médicos para la atención primaria y especializada de la salud.",
         requisitos: "Bachillerato en Ciencias, Examen de acceso a la educación superior",
-        campoLaboral: "Hospitales, clínicas, centros de salud, investigación médica"
+        campoLaboral: "Hospitales, clínicas, centros de salud, investigación médica",
+        pagina: "https://www.pucese.edu.ec"
     },
     {
         id: 2,
@@ -22,7 +28,8 @@ const carrerasData = [
         duracion: "5 años",
         descripcion: "Formación de profesionales en el diseño, desarrollo y gestión de sistemas informáticos.",
         requisitos: "Bachillerato en Ciencias, Matemáticas avanzadas",
-        campoLaboral: "Empresas de tecnología, bancos, consultoría IT, desarrollo de software"
+        campoLaboral: "Empresas de tecnología, bancos, consultoría IT, desarrollo de software",
+        pagina: "https://www.pucese.edu.ec"
     },
     {
         id: 3,
@@ -34,7 +41,8 @@ const carrerasData = [
         duracion: "4 años",
         descripcion: "Estudio del comportamiento humano y procesos mentales para el bienestar social.",
         requisitos: "Bachillerato, Aptitudes de comunicación",
-        campoLaboral: "Clínicas, hospitales, instituciones educativas, recursos humanos"
+        campoLaboral: "Clínicas, hospitales, instituciones educativas, recursos humanos",
+        pagina: "https://www.pucese.edu.ec"
     },
     {
         id: 4,
@@ -46,7 +54,8 @@ const carrerasData = [
         duracion: "5 años",
         descripcion: "Formación integral en ciencias jurídicas y práctica del derecho.",
         requisitos: "Bachillerato, Comprensión lectora avanzada",
-        campoLaboral: "Bufetes jurídicos, instituciones públicas, sector empresarial"
+        campoLaboral: "Bufetes jurídicos, instituciones públicas, sector empresarial",
+        pagina: "https://www.pucese.edu.ec"
     },
     {
         id: 5,
@@ -58,7 +67,8 @@ const carrerasData = [
         duracion: "4 años",
         descripcion: "Desarrollo de habilidades gerenciales y empresariales para liderar organizaciones.",
         requisitos: "Bachillerato, Matemáticas básicas",
-        campoLaboral: "Empresas públicas y privadas, emprendimientos, consultoría"
+        campoLaboral: "Empresas públicas y privadas, emprendimientos, consultoría",
+        pagina: "https://www.pucese.edu.ec"
     },
     {
         id: 6,
@@ -70,7 +80,8 @@ const carrerasData = [
         duracion: "4 años",
         descripcion: "Formación de profesionales de enfermería para el cuidado integral de la salud.",
         requisitos: "Bachillerato en Ciencias, Vocación de servicio",
-        campoLaboral: "Hospitales, clínicas, centros de salud, atención domiciliaria"
+        campoLaboral: "Hospitales, clínicas, centros de salud, atención domiciliaria",
+        pagina: "https://www.pucese.edu.ec"
     },
     {
         id: 7,
@@ -82,7 +93,8 @@ const carrerasData = [
         duracion: "5 años",
         descripcion: "Diseño y planificación de espacios arquitectónicos y urbanos.",
         requisitos: "Bachillerato, Habilidades de dibujo y creatividad",
-        campoLaboral: "Estudios de arquitectura, construcción, planificación urbana"
+        campoLaboral: "Estudios de arquitectura, construcción, planificación urbana",
+        pagina: "https://www.pucese.edu.ec"
     },
     {
         id: 8,
@@ -94,7 +106,8 @@ const carrerasData = [
         duracion: "5 años",
         descripcion: "Diseño, construcción y mantenimiento de infraestructuras civiles.",
         requisitos: "Bachillerato en Ciencias, Matemáticas y Física avanzadas",
-        campoLaboral: "Constructoras, consultoras, sector público, proyectos de infraestructura"
+        campoLaboral: "Constructoras, consultoras, sector público, proyectos de infraestructura",
+        pagina: "https://www.pucese.edu.ec"
     },
     {
         id: 9,
@@ -106,7 +119,8 @@ const carrerasData = [
         duracion: "4 años",
         descripcion: "Formación de docentes para la educación básica y primaria.",
         requisitos: "Bachillerato, Vocación docente",
-        campoLaboral: "Instituciones educativas públicas y privadas, centros de capacitación"
+        campoLaboral: "Instituciones educativas públicas y privadas, centros de capacitación",
+        pagina: "https://www.pucese.edu.ec"
     },
     {
         id: 10,
@@ -118,7 +132,8 @@ const carrerasData = [
         duracion: "4 años",
         descripcion: "Estudio de los seres vivos y sus procesos vitales.",
         requisitos: "Bachillerato en Ciencias, Interés en ciencias naturales",
-        campoLaboral: "Laboratorios, investigación, conservación ambiental, educación"
+        campoLaboral: "Laboratorios, investigación, conservación ambiental, educación",
+        pagina: "https://www.pucese.edu.ec"
     },
     {
         id: 11,
@@ -130,7 +145,8 @@ const carrerasData = [
         duracion: "4 años",
         descripcion: "Formación en periodismo, comunicación audiovisual y medios digitales.",
         requisitos: "Bachillerato, Habilidades de comunicación",
-        campoLaboral: "Medios de comunicación, agencias de publicidad, comunicación corporativa"
+        campoLaboral: "Medios de comunicación, agencias de publicidad, comunicación corporativa",
+        pagina: "https://www.pucese.edu.ec"
     },
     {
         id: 12,
@@ -142,7 +158,8 @@ const carrerasData = [
         duracion: "3.5 años",
         descripcion: "Estrategias de marketing en plataformas digitales y comercio electrónico.",
         requisitos: "Bachillerato, Conocimientos básicos de informática",
-        campoLaboral: "Agencias de marketing, e-commerce, redes sociales, consultoría digital"
+        campoLaboral: "Agencias de marketing, e-commerce, redes sociales, consultoría digital",
+        pagina: "https://www.pucese.edu.ec"
     },
     {
         id: 13,
@@ -154,7 +171,8 @@ const carrerasData = [
         duracion: "4 años",
         descripcion: "Gestión y promoción de destinos turísticos y servicios de hospitalidad.",
         requisitos: "Bachillerato, Idiomas (preferible)",
-        campoLaboral: "Hoteles, agencias de viajes, ministerio de turismo, emprendimiento turístico"
+        campoLaboral: "Hoteles, agencias de viajes, ministerio de turismo, emprendimiento turístico",
+        pagina: "https://www.pucese.edu.ec"
     },
     {
         id: 14,
@@ -166,7 +184,8 @@ const carrerasData = [
         duracion: "5 años",
         descripcion: "Cuidado integral de la salud animal y medicina veterinaria.",
         requisitos: "Bachillerato en Ciencias, Amor por los animales",
-        campoLaboral: "Clínicas veterinarias, granjas, zoológicos, investigación animal"
+        campoLaboral: "Clínicas veterinarias, granjas, zoológicos, investigación animal",
+        pagina: "https://www.pucese.edu.ec"
     },
     {
         id: 15,
@@ -178,9 +197,14 @@ const carrerasData = [
         duracion: "4 años",
         descripcion: "Gestión financiera, contable y auditoría empresarial.",
         requisitos: "Bachillerato, Aptitudes matemáticas",
-        campoLaboral: "Empresas públicas y privadas, firmas de auditoría, consultoría financiera"
+        campoLaboral: "Empresas públicas y privadas, firmas de auditoría, consultoría financiera",
+        pagina: "https://www.pucese.edu.ec"
     }
 ];
+
+// =============================================
+// SECCIÓN 2: CARRUSEL DE IMÁGENES DE FONDO
+// =============================================
 
   // Seleccionamos el contenedor
   const inicio = document.getElementById("inicio");
@@ -201,6 +225,11 @@ const carrerasData = [
   setInterval(cambiarFondo, 5000); // cambia cada 5 segundos
 
 
+// =============================================
+// SECCIÓN 3: VARIABLES GLOBALES Y ELEMENTOS DOM
+// =============================================
+
+
 // Variables globales
 let carrerasFiltradas = [...carrerasData];
 
@@ -218,12 +247,22 @@ const modalBody = document.getElementById('modalBody');
 const closeModal = document.getElementById('closeModal');
 const menuToggle = document.getElementById('menuToggle');
 
+// =============================================
+// SECCIÓN 4: INICIALIZACIÓN DE LA APLICACIÓN
+// =============================================
+
+
 // Inicialización de la aplicación
 document.addEventListener('DOMContentLoaded', function() {
     mostrarCarreras(carrerasData);
     inicializarEventListeners();
     animarContadores();
 });
+
+
+// =============================================
+// SECCIÓN 5: MANEJO DE EVENTOS
+// =============================================
 
 // Event listeners
 function inicializarEventListeners() {
@@ -268,6 +307,11 @@ function inicializarEventListeners() {
     });
 }
 
+// =============================================
+// SECCIÓN 6: FILTRADO Y BÚSQUEDA
+// =============================================
+
+
 // Función para filtrar carreras
 function filtrarCarreras() {
     const searchTerm = searchInput.value.toLowerCase();
@@ -290,6 +334,10 @@ function filtrarCarreras() {
     mostrarCarreras(carrerasFiltradas);
     actualizarContadorResultados();
 }
+
+// =============================================
+// SECCIÓN 7: VISUALIZACIÓN DE RESULTADOS
+// =============================================
 
 // Función para mostrar carreras
 function mostrarCarreras(carreras) {
@@ -325,6 +373,11 @@ function mostrarCarreras(carreras) {
         card.style.animation = `fadeInUp 0.6s ease forwards ${index * 0.1}s`;
     });
 }
+
+
+// =============================================
+// SECCIÓN 8: MODAL DE DETALLES
+// =============================================
 
 // Función para mostrar detalle de carrera en modal
 function mostrarDetalleCarrera(id) {
@@ -370,6 +423,11 @@ function mostrarDetalleCarrera(id) {
             <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Campo Laboral</h4>
             <p>${carrera.campoLaboral}</p>
         </div>
+
+        <div style="margin-top: 2rem;">
+            <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Pagina</h4>
+            <p>${carrera.pagina}</p>
+        </div>
     `;
     
     modal.style.display = 'block';
@@ -384,6 +442,11 @@ function cerrarModal() {
     document.body.style.overflow = 'auto'; // Restaurar scroll del body
 }
 
+
+// =============================================
+// SECCIÓN 9: FUNCIONES AUXILIARES
+// =============================================
+
 // Función para actualizar contador de resultados
 function actualizarContadorResultados() {
     const total = carrerasFiltradas.length;
@@ -395,6 +458,8 @@ function actualizarContadorResultados() {
         resultsCount.textContent = `Mostrando ${total} carrera${total === 1 ? '' : 's'}`;
     }
 }
+
+
 
 // Funciones auxiliares
 function capitalizeFirst(str) {
@@ -413,6 +478,11 @@ function getAreaLabel(area) {
     };
     return areas[area] || area;
 }
+
+
+// =============================================
+// SECCIÓN 10: ANIMACIONES Y EFECTOS
+// =============================================
 
 // Función para animar contadores en hero
 function animarContadores() {
@@ -445,6 +515,11 @@ function toggleMobileMenu() {
     const nav = document.querySelector('.nav');
     nav.classList.toggle('show');
 }
+
+// =============================================
+// SECCIÓN 11: ESTILOS DINÁMICOS
+// =============================================
+
 
 // Animaciones CSS adicionales
 const style = document.createElement('style');
@@ -500,6 +575,10 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// =============================================
+// SECCIÓN 12: OPTIMIZACIONES (LAZY LOADING)
+// =============================================
 
 // Lazy loading para mejorar rendimiento
 function lazyLoadImages() {

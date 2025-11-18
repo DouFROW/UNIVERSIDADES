@@ -63,10 +63,21 @@ body {
 
 .logo i {
     font-size: 1.5rem;
+    color: red;
 }
 
 .logo h1 {
     font-size: 1.25rem;
+    color: rgb(224, 222, 54);
+}
+
+
+.uni {
+    color: rgb(240, 109, 109);
+}
+
+.carreras {
+    color: rgb(109, 118, 240);
 }
 
 .nav {
@@ -128,18 +139,18 @@ body {
 }
 
 .hero-content {
-  top: 40%;
+  top: 28%;
 }
 
 .hero-content h2 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 800;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
 
 .hero-content p {
-    font-size: 1.25rem;
+    font-size: 1.30rem;
     margin-bottom: 2rem;
     opacity: 0.9;
     max-width: 600px;
@@ -174,7 +185,8 @@ body {
     bottom: 10%;
     display: flex;
     justify-content: center;
-     gap: 40px;
+    gap: 40px;
+    margin-bottom: 40px;
 }
 
 .stat {
@@ -197,7 +209,7 @@ body {
 #inicio {
   position: relative;
   width: 100%;
-  height: 70vh; /* pantalla completa */
+  height: 70vh; 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -207,6 +219,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#inicio::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.432); /* ajusta el 0.6 para más/menos oscuridad */
+  z-index: 1;
 }
 
 #inicio ul {
@@ -441,6 +461,16 @@ body {
     font-size: 2rem;
 }
 
+.university-logo img{
+    width: 100%;
+    height: 100%;
+}
+
+#logo-UC{
+    width: 90px;
+    height: 110px;
+}
+
 .university-card h4 {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
@@ -470,16 +500,16 @@ body {
 }
 
 .contact-section h3 {
-    font-size: 2rem;
+    font-size: 40px;
     margin-bottom: 1rem;
     color: var(--text-primary);
 }
 
 .contact-section p {
-    font-size: 1.1rem;
+    font-size: 20px;
     color: var(--text-secondary);
     margin-bottom: 2rem;
-    max-width: 600px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -573,7 +603,7 @@ body {
     padding: 0;
     border-radius: 16px;
     width: 90%;
-    max-width: 600px;
+    max-width: 650px;
     max-height: 80vh;
     overflow-y: auto;
     position: relative;
@@ -622,6 +652,7 @@ body {
     color: white;
     padding: 2rem 2rem 1rem;
     border-radius: 16px 16px 0 0;
+
 }
 
 .modal-header h3 {
