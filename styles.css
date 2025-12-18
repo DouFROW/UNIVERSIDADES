@@ -603,7 +603,7 @@ body {
     padding: 0;
     border-radius: 16px;
     width: 90%;
-    max-width: 650px;
+    max-width: 1000px;
     max-height: 80vh;
     overflow-y: auto;
     position: relative;
