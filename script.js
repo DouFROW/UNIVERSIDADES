@@ -5,7 +5,7 @@
 // =============================================
 
 const carrerasData = [
-  // Ciencias de la Salud
+  // Ciencias de la Salud - Esmeraldas
   {
     id: 1,
     nombre: "Medicina",
@@ -26,30 +26,30 @@ const carrerasData = [
     id: 2,
     nombre: "Enfermería",
     area: "ciencias-salud",
-    universidad: "Universidad de Guayaquil",
-    ciudad: "guayaquil",
+    universidad: "PUCESE - Pontificia Universidad Católica del Ecuador Sede Esmeraldas",
+    ciudad: "esmeraldas",
     modalidad: "presencial",
     duracion: "4 años",
     descripcion:
-      "Formación de profesionales de enfermería para el cuidado integral de la salud.",
+      "Formación de profesionales de enfermería para el cuidado integral de la salud en la región costera.",
     requisitos: "Bachillerato en Ciencias, Vocación de servicio",
     campoLaboral:
-      "Hospitales, clínicas, centros de salud, atención domiciliaria",
-    pagina: "https://admision.ug.edu.ec/oferta-ug",
+      "Hospitales, clínicas, centros de salud, atención comunitaria",
+    pagina: "https://www.pucese.edu.ec/oferta-academica/grado/enfermeria",
   },
   {
     id: 3,
     nombre: "Odontología",
     area: "ciencias-salud",
-    universidad: "Universidad de Cuenca",
-    ciudad: "cuenca",
+    universidad: "Universidad Luis Vargas Torres",
+    ciudad: "esmeraldas",
     modalidad: "presencial",
     duracion: "5 años",
     descripcion:
-      "Formación de profesionales en salud bucal, diagnóstico y tratamiento de enfermedades dentales.",
+      "Formación de profesionales en salud bucal con enfoque en las necesidades de la población esmeraldeña.",
     requisitos: "Bachillerato en Ciencias, Examen de ingreso",
-    campoLaboral: "Consultorios dentales, hospitales, clínicas, investigación",
-    pagina: "https://www.ucuenca.edu.ec/carreras/odontologia",
+    campoLaboral: "Consultorios dentales, hospitales, clínicas, atención pública",
+    pagina: "https://www.ult.edu.ec/carreras/odontologia",
   },
   {
     id: 4,
@@ -100,17 +100,17 @@ const carrerasData = [
   },
   {
     id: 7,
-    nombre: "Ingeniería Industrial",
+    nombre: "Ingeniería en Acuicultura",
     area: "ingenieria",
-    universidad: "Universidad de Guayaquil",
-    ciudad: "guayaquil",
+    universidad: "Universidad Luis Vargas Torres",
+    ciudad: "esmeraldas",
     modalidad: "presencial",
     duracion: "5 años",
     descripcion:
-      "Optimización de procesos productivos y sistemas organizacionales para mejorar la eficiencia.",
-    requisitos: "Bachillerato en Ciencias, Matemáticas y física",
-    campoLaboral: "Industrias manufactureras, consultoría, logística",
-    pagina: "https://admision.ug.edu.ec/oferta-ug",
+      "Formación especializada en cultivo y producción de especies acuáticas en ambientes costeros.",
+    requisitos: "Bachillerato en Ciencias, Interés en biología marina",
+    campoLaboral: "Granjas acuícolas, centros de investigación marina, pesca",
+    pagina: "https://www.ult.edu.ec/carreras/acuicultura",
   },
   {
     id: 8,
@@ -133,12 +133,12 @@ const carrerasData = [
     id: 9,
     nombre: "Psicología",
     area: "ciencias-sociales",
-    universidad: "Pontificia Universidad Católica del Ecuador",
-    ciudad: "quito",
+    universidad: "PUCESE - Pontificia Universidad Católica del Ecuador Sede Esmeraldas",
+    ciudad: "esmeraldas",
     modalidad: "presencial",
     duracion: "4 años",
     descripcion:
-      "Estudio del comportamiento humano y procesos mentales para el bienestar social.",
+      "Estudio del comportamiento humano y procesos mentales con enfoque en la realidad social esmeraldeña.",
     requisitos: "Bachillerato, Aptitudes de comunicación",
     campoLaboral:
       "Clínicas, hospitales, instituciones educativas, recursos humanos",
@@ -210,16 +210,16 @@ const carrerasData = [
     id: 14,
     nombre: "Diseño Gráfico",
     area: "arte-humanidades",
-    universidad: "Universidad San Francisco de Quito",
-    ciudad: "quito",
+    universidad: "PUCESE - Pontificia Universidad Católica del Ecuador Sede Esmeraldas",
+    ciudad: "esmeraldas",
     modalidad: "presencial",
     duracion: "4 años",
     descripcion:
-      "Creación de soluciones visuales para comunicación y publicidad.",
+      "Creación de soluciones visuales con inspiración en la cultura y biodiversidad esmeraldeña.",
     requisitos: "Bachillerato, Creatividad, habilidades artísticas",
     campoLaboral:
-      "Agencias de publicidad, estudios de diseño, medios digitales",
-    pagina: "https://www.usfq.edu.ec/es/carreras-de-pregrado/diseno-grafico",
+      "Agencias de publicidad, estudios de diseño, medios digitales, turismo",
+    pagina: "https://www.pucese.edu.ec/oferta-academica/grado/diseno-grafico",
   },
   {
     id: 15,
@@ -331,16 +331,16 @@ const carrerasData = [
     id: 22,
     nombre: "Pedagogía",
     area: "educacion",
-    universidad: "Universidad Central del Ecuador",
-    ciudad: "quito",
+    universidad: "Universidad Luis Vargas Torres",
+    ciudad: "esmeraldas",
     modalidad: "presencial",
     duracion: "4 años",
     descripcion:
-      "Ciencia de la educación, enfocada en métodos y procesos de enseñanza.",
+      "Ciencia de la educación con enfoque en la realidad educativa de la región costera.",
     requisitos: "Bachillerato, Interés en procesos educativos",
     campoLaboral:
       "Instituciones educativas, diseño curricular, investigación educativa",
-    pagina: "https://www.uce.edu.ec/web/facultad-de-filosofia",
+    pagina: "https://www.ult.edu.ec/carreras/pedagogia",
   },
   {
     id: 23,
@@ -405,30 +405,30 @@ const carrerasData = [
     id: 27,
     nombre: "Contabilidad y Auditoría",
     area: "economia-negocios",
-    universidad: "Universidad Técnica de Machala",
-    ciudad: "machala",
+    universidad: "Universidad Luis Vargas Torres",
+    ciudad: "esmeraldas",
     modalidad: "presencial",
     duracion: "4 años",
-    descripcion: "Gestión financiera, contable y auditoría empresarial.",
+    descripcion: "Gestión financiera y contable para empresas de la región costera.",
     requisitos: "Bachillerato, Aptitudes matemáticas",
     campoLaboral:
       "Empresas públicas y privadas, firmas de auditoría, consultoría financiera",
-    pagina: "https://portal.utmachala.edu.ec/portalwp/carrera/contabilidad-y-auditoria",
+    pagina: "https://www.ult.edu.ec/carreras/contabilidad",
   },
   {
     id: 28,
     nombre: "Turismo",
     area: "economia-negocios",
-    universidad: "Universidad Técnica del Norte",
-    ciudad: "riobamba",
+    universidad: "PUCESE - Pontificia Universidad Católica del Ecuador Sede Esmeraldas",
+    ciudad: "esmeraldas",
     modalidad: "presencial",
     duracion: "4 años",
     descripcion:
-      "Gestión y promoción de destinos turísticos y servicios de hospitalidad.",
-    requisitos: "Bachillerato, Idiomas (preferible)",
+      "Gestión y promoción del turismo sostenible en la región costera y sus atractivos naturales.",
+    requisitos: "Bachillerato, Idiomas (preferible), interés en cultura local",
     campoLaboral:
-      "Hoteles, agencias de viajes, ministerio de turismo, emprendimiento turístico",
-    pagina: "https://turismo.utn.edu.ec",
+      "Hoteles, agencias de viajes, ministerio de turismo, guías turísticos",
+    pagina: "https://www.pucese.edu.ec/oferta-academica/grado/turismo",
   },
   
   // Carreras adicionales para cobertura completa
@@ -548,6 +548,67 @@ const carrerasData = [
       "Hospitales, clínicas, atención primaria, telemedicina",
     pagina: "https://www.utpl.edu.ec/carreras/enfermeria",
   },
+  // Carreras adicionales para Esmeraldas
+  {
+    id: 37,
+    nombre: "Gastronomía",
+    area: "arte-humanidades",
+    universidad: "Universidad Luis Vargas Torres",
+    ciudad: "esmeraldas",
+    modalidad: "presencial",
+    duracion: "4 años",
+    descripcion:
+      "Arte culinario con énfasis en la gastronomía costera y afroecuatoriana.",
+    requisitos: "Bachillerato, Creatividad, interés en cocina",
+    campoLaboral:
+      "Restaurantes, hoteles, catering, emprendimiento gastronómico",
+    pagina: "https://www.ult.edu.ec/carreras/gastronomia",
+  },
+  {
+    id: 38,
+    nombre: "Ingeniería en Petróleos",
+    area: "ingenieria",
+    universidad: "Universidad Luis Vargas Torres",
+    ciudad: "esmeraldas",
+    modalidad: "presencial",
+    duracion: "5 años",
+    descripcion:
+      "Formación especializada en la explotación y procesamiento de recursos petroleros.",
+    requisitos: "Bachillerato en Ciencias, Matemáticas y química",
+    campoLaboral:
+      "Industria petrolera, refinerías, consultoría energética",
+    pagina: "https://www.ult.edu.ec/carreras/ingenieria-petroleos",
+  },
+  {
+    id: 39,
+    nombre: "Trabajo Social",
+    area: "ciencias-sociales",
+    universidad: "PUCESE - Pontificia Universidad Católica del Ecuador Sede Esmeraldas",
+    ciudad: "esmeraldas",
+    modalidad: "presencial",
+    duracion: "4 años",
+    descripcion:
+      "Intervención social para mejorar la calidad de vida de comunidades vulnerables.",
+    requisitos: "Bachillerato, Sensibilidad social, vocación de servicio",
+    campoLaboral:
+      "ONGs, municipios, ministerios, trabajo comunitario",
+    pagina: "https://www.pucese.edu.ec/oferta-academica/grado/trabajo-social",
+  },
+  {
+    id: 40,
+    nombre: "Administración de Empresas Turísticas",
+    area: "economia-negocios",
+    universidad: "PUCESE - Pontificia Universidad Católica del Ecuador Sede Esmeraldas",
+    ciudad: "esmeraldas",
+    modalidad: "presencial",
+    duracion: "4 años",
+    descripcion:
+      "Gestión empresarial especializada en el sector turístico costero.",
+    requisitos: "Bachillerato, Idiomas, interés en turismo",
+    campoLaboral:
+      "Hoteles, agencias de viajes, operadores turísticos, emprendimiento",
+    pagina: "https://www.pucese.edu.ec/oferta-academica/grado/administracion-turistica",
+  },
 ];
 
 // =============================================
@@ -609,6 +670,9 @@ document.addEventListener("DOMContentLoaded", function () {
   
   inicializarEventListeners();
   animarContadores();
+  
+  // Agregar Esmeraldas al filtro de ciudades si no existe
+  agregarEsmeraldasAlFiltro();
 });
 
 // =============================================
@@ -879,6 +943,19 @@ function actualizarContadorResultados() {
   }
 }
 
+// Función para agregar Esmeraldas al filtro de ciudades
+function agregarEsmeraldasAlFiltro() {
+  const ciudadFilter = document.getElementById("ciudadFilter");
+  const opcionesExistentes = Array.from(ciudadFilter.options).map(opt => opt.value);
+  
+  if (!opcionesExistentes.includes("esmeraldas")) {
+    const nuevaOpcion = document.createElement("option");
+    nuevaOpcion.value = "esmeraldas";
+    nuevaOpcion.textContent = "Esmeraldas";
+    ciudadFilter.appendChild(nuevaOpcion);
+  }
+}
+
 // Funciones auxiliares
 function capitalizeFirst(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -916,7 +993,7 @@ function animarContadores() {
     },
     {
       element: document.getElementById("ciudadesCount"),
-      target: 20,
+      target: 21, // Actualizado a 21+ por Esmeraldas
       suffix: "+",
     },
   ];
