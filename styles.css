@@ -16,6 +16,8 @@
     --success-color: #10b981;
     --warning-color: #f59e0b;
     --danger-color: #ef4444;
+    --yellow-color: rgba(255, 230, 0, 0.904);
+    --red-color: #3b1e1e;
     --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -350,7 +352,7 @@ body {
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(90deg, var(--yellow-color), rgb(248, 248, 142));
 }
 
 .career-card:hover {
@@ -441,6 +443,7 @@ body {
     box-shadow: var(--shadow);
     border: 1px solid var(--border-color);
     transition: var(--transition);
+    cursor: pointer;
 }
 
 .university-card:hover {
@@ -464,6 +467,8 @@ body {
 .university-logo img{
     width: 100%;
     height: 100%;
+    object-fit: contain;
+    padding: 10px;
 }
 
 #logo-UC{
@@ -535,7 +540,7 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--text-primary);
+    background: var(--red-color);
     color: white;
     padding: 3rem 0 1rem;
 }
@@ -603,7 +608,7 @@ body {
     padding: 0;
     border-radius: 16px;
     width: 90%;
-    max-width: 1000px;
+    max-width: 1200px; /* Aumentamos el ancho máximo para acomodar la imagen */
     max-height: 80vh;
     overflow-y: auto;
     position: relative;
@@ -648,11 +653,10 @@ body {
 }
 
 .modal-header {
-    background: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--danger-color) 70%);
     color: white;
     padding: 2rem 2rem 1rem;
     border-radius: 16px 16px 0 0;
-
 }
 
 .modal-header h3 {
@@ -660,26 +664,536 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.modal-info {
+/* ============================================= */
+/* NUEVA ESTRUCTURA PARA MODAL COMO IMAGEN DEL TIGRE */
+/* ============================================= */
+
+.modal-content-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
     margin: 1.5rem 0;
 }
 
-.modal-info-item {
+/* Columna de imagen (izquierda) */
+.modal-image-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-image-container {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow);
+    aspect-ratio: 1/1; /* Hace la imagen cuadrada */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.modal-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 2rem;
+}
+
+.modal-image-placeholder i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* Información de la imagen debajo */
+.modal-image-info {
     background: var(--secondary-color);
     padding: 1rem;
     border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
 }
 
-.modal-info-item strong {
-    color: var(--primary-color);
-    display: block;
+.modal-image-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* Columna de información (derecha) - Estilo de tabla como en imagen del tigre */
+.modal-info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Título principal de la carrera */
+.modal-info-title {
+    margin-bottom: 0.5rem;
+}
+
+.modal-info-title h4 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
     margin-bottom: 0.25rem;
 }
 
-/* Responsive Design */
+.modal-info-title p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Tabla de información específica */
+.modal-info-details {
+    width: 100%;
+}
+
+.modal-info-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+.modal-info-details tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-info-details tr:last-child {
+    border-bottom: none;
+}
+
+.modal-info-details td {
+    padding: 0.75rem 0;
+    vertical-align: top;
+}
+
+.modal-info-details td:first-child {
+    width: 40%;
+    color: var(--danger-color);
+    font-weight: 600;
+    padding-right: 1rem;
+}
+
+.modal-info-details td:last-child {
+    width: 60%;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Sección de área */
+.modal-area-section {
+    background: rgba(37, 99, 235, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.modal-area-section strong {
+    color: var(--danger-color);
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+}
+
+.modal-area-section span {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Contenido adicional (descripción, requisitos, etc.) */
+.modal-additional-content {
+    margin-top: 0.5rem;
+}
+
+.modal-additional-content h5 {
+    color: var(--primary-color);
+    margin: 1.5rem 0 0.75rem 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.modal-additional-content p {
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* ============================================= */
+/* ESTILOS ESPECÍFICOS PARA MODAL DE UNIVERSIDADES */
+/* ============================================= */
+
+#universityModal .modal-content {
+    max-width: 800px;
+}
+
+#universityModal .modal-header {
+    background: linear-gradient(135deg, var(--yellow-color) 0%, var(--primary-dark) 100%);
+}
+
+/* Contenedor principal del modal de universidad */
+.university-modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Contenedor del logo centrado */
+.university-logo-center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/* Logo grande en el centro */
+.university-logo-large {
+    width: 180px;
+    height: 180px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: var(--shadow);
+    border: 5px solid var(--primary-color);
+    overflow: hidden;
+}
+
+.university-logo-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+    background: white;
+}
+
+.university-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 15px;
+}
+
+.university-logo-placeholder-large {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-light) 30%);
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.university-logo-placeholder-large i {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.university-logo-placeholder-large span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.university-logo-placeholder-large p {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Información de la universidad debajo del logo */
+.university-info-below-logo {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.university-info-title-below {
+    margin-bottom: 1.5rem;
+}
+
+.university-info-title-below h4 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.university-info-title-below p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Tabla de información de la universidad (centrada) */
+.university-info-details-below {
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.university-info-details-below table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: left;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.university-info-details-below tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.university-info-details-below tr:last-child {
+    border-bottom: none;
+}
+
+.university-info-details-below td {
+    padding: 1rem;
+    vertical-align: top;
+}
+
+.university-info-details-below td:first-child {
+    width: 35%;
+    color: var(--danger-color);
+    font-weight: 600;
+    background-color: rgba(239, 68, 68, 0.05);
+    border-right: 2px solid var(--border-color);
+}
+
+.university-info-details-below td:last-child {
+    width: 65%;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Sección de carreras destacadas */
+.university-carreras-section {
+    background: rgba(37, 99, 235, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border-left: 4px solid var(--primary-color);
+    width: 100%;
+}
+
+.university-carreras-section h5 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.university-carreras-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.university-carrera-tag {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.university-carrera-tag:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Contenido adicional para universidades */
+.university-additional-content-below {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.university-additional-content-below h5 {
+    color: var(--primary-color);
+    margin: 1.5rem 0 0.75rem 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.university-additional-content-below p {
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Botón de visita a la página */
+.university-visit-button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.university-visit-button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Estilos para logos responsivos */
+@media (max-width: 768px) {
+    .university-logo-large {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .university-logo-placeholder-large i {
+        font-size: 2.8rem;
+    }
+    
+    .university-logo-placeholder-large span {
+        font-size: 2rem;
+    }
+    
+    .university-info-title-below h4 {
+        font-size: 1.5rem;
+    }
+    
+    .university-info-details-below table {
+        display: block;
+    }
+    
+    .university-info-details-below tr {
+        display: block;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .university-info-details-below td {
+        display: block;
+        width: 100% !important;
+        padding: 0.5rem 0;
+        background-color: transparent !important;
+        border-right: none !important;
+    }
+    
+    .university-info-details-below td:first-child {
+        color: var(--danger-color);
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        border-right: none;
+    }
+    
+    .university-additional-content-below h5 {
+        font-size: 1.2rem;
+    }
+    
+    .university-carreras-list {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .university-logo-large {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .university-logo-placeholder-large i {
+        font-size: 2.5rem;
+    }
+    
+    .university-logo-placeholder-large span {
+        font-size: 1.8rem;
+    }
+    
+    .university-info-title-below h4 {
+        font-size: 1.3rem;
+    }
+    
+    .university-info-title-below p {
+        font-size: 1rem;
+    }
+    
+    .university-additional-content-below h5 {
+        font-size: 1.1rem;
+    }
+    
+    .university-carrera-tag {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.8rem;
+    }
+}
+/* ============================================= */
+/* RESPONSIVE DESIGN */
+/* ============================================= */
+
+@media (max-width: 1024px) {
+    .modal-content-wrapper {
+        gap: 2rem;
+    }
+    
+    .modal-info-title h4 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .modal-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .modal-image-column {
+        order: 1;
+    }
+    
+    .modal-info-column {
+        order: 2;
+    }
+    
+    .modal-image-container {
+        max-height: 400px;
+    }
+}
+
 @media (max-width: 768px) {
     .nav {
         display: none;
@@ -717,6 +1231,45 @@ body {
         margin: 10% auto;
         width: 95%;
     }
+    
+    .universities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content-wrapper {
+        gap: 1.5rem;
+    }
+    
+    .modal-info-title h4 {
+        font-size: 1.4rem;
+    }
+    
+    .modal-info-details table {
+        display: block;
+    }
+    
+    .modal-info-details tr {
+        display: block;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .modal-info-details td {
+        display: block;
+        width: 100% !important;
+        padding: 0.25rem 0;
+    }
+    
+    .modal-info-details td:first-child {
+        color: var(--danger-color);
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+    }
+    
+    .modal-additional-content h5 {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -745,5 +1298,113 @@ body {
 
     .modal-body {
         padding: 1.5rem;
+    }
+    
+    .modal-content-wrapper {
+        gap: 1.5rem;
+    }
+    
+    .modal-header {
+        padding: 1.5rem 1.5rem 1rem;
+    }
+    
+    .modal-header h3 {
+        font-size: 1.25rem;
+    }
+    
+    .modal-image-placeholder {
+        height: 200px;
+        padding: 1.5rem;
+    }
+    
+    .modal-image-placeholder i {
+        font-size: 2.5rem;
+    }
+    
+    .modal-info-title h4 {
+        font-size: 1.25rem;
+    }
+    
+    .modal-info-title p {
+        font-size: 0.9rem;
+    }
+    
+    .modal-additional-content h5 {
+        font-size: 1.1rem;
+    }
+}
+
+/* ============================================= */
+/* ANIMACIONES ADICIONALES */
+/* ============================================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-image-container {
+    animation: fadeIn 0.5s ease-out 0.3s both;
+}
+
+.modal-info-column {
+    animation: fadeIn 0.5s ease-out 0.5s both;
+}
+
+/* Animaciones CSS adicionales para las tarjetas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.career-card {
+    opacity: 0;
+}
+
+.career-description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 1rem 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Menú móvil */
+@media (max-width: 768px) {
+    .nav.show {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: var(--shadow-lg);
+        border-top: 1px solid var(--border-color);
+    }
+    
+    .nav.show a {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .nav.show a:last-child {
+        border-bottom: none;
     }
 }
