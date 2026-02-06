@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniCarreras Ecuador - Portal de Carreras Universitarias</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/data.js"></script>
+    <script src="js/app.js" defer></script>
+    <script src="js/shared.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1><span class="uni">Uni</span><span class="carreras">Carreras</span> Ecuador</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="carreras.html">Carreras</a>
+                <a href="universidades.html">Universidades</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Universities Section -->
+    <section class="universities-section" id="universidades">
+        <div class="container">
+            <h3>Principales Universidades</h3>
+            <div class="universities-grid">
+                <div class="university-card" data-university-id="1">
+                    <div class="university-logo">
+                        <img src="image/uniCentralEcuador.png" alt="Logo Universidad Central del Ecuador">
+                    </div>
+                    <h4>Universidad Central del Ecuador</h4>
+                    <p>Quito</p>
+                    <span class="university-type">Pública</span>
+                </div>
+                <div class="university-card" data-university-id="2">
+                    <div class="university-logo">
+                        <img src="image/EPN.png" alt="Logo Escuela Politécnica Nacional">
+                    </div>
+                    <h4>Escuela Politécnica Nacional</h4>
+                    <p>Quito</p>
+                    <span class="university-type">Pública</span>
+                </div>
+                <div class="university-card" data-university-id="3">
+                    <div class="university-logo">
+                        <img src="image/UG.png" alt="Logo Universidad de Guayaquil">
+                    </div>
+                    <h4>Universidad de Guayaquil</h4>
+                    <p>Guayaquil</p>
+                    <span class="university-type">Pública</span>
+                </div>
+                <div class="university-card" data-university-id="4">
+                    <div class="university-logo">
+                        <img src="image/USFQ.png" alt="Logo Universidad San Francisco de Quito">
+                    </div>
+                    <h4>Universidad San Francisco de Quito</h4>
+                    <p>Quito</p>
+                    <span class="university-type">Privada</span>
+                </div>
+                <div class="university-card" data-university-id="5">
+                    <div class="university-logo" id="logo-UC">
+                        <img src="image/UC.png" alt="Logo Universidad de Cuenca">
+                    </div>
+                    <h4>Universidad de Cuenca</h4>
+                    <p>Cuenca</p>
+                    <span class="university-type">Pública</span>
+                </div>
+                <div class="university-card" data-university-id="6">
+                    <div class="university-logo">
+                        <img src="image/puce.png" alt="Logo Pontificia Universidad Católica del Ecuador">
+                    </div>
+                    <h4>Pontificia Universidad Católica del Ecuador</h4>
+                    <p>Quito</p>
+                    <span class="university-type">Privada</span>
+                </div>
+                <!-- Universidad Luis Vargas Torres de Esmeraldas -->
+                <div class="university-card" data-university-id="7">
+                    <div class="university-logo">
+                        <img src="image/ESCUDETO_UTE-LVT.png" alt="Logo Universidad Luis Vargas Torres">
+                    </div>
+                    <h4>Universidad Luis Vargas Torres</h4>
+                    <p>Esmeraldas</p>
+                    <span class="university-type">Pública</span>
+                </div>
+                <!-- PUCESE de Esmeraldas -->
+                <div class="university-card" data-university-id="8">
+                    <div class="university-logo">
+                        <img src="image/puce_esme.jpg" alt="Logo PUCESE Esmeraldas">
+                    </div>
+                    <h4>PUCESE - Pontificia Universidad Católica Sede Esmeraldas</h4>
+                    <p>Esmeraldas</p>
+                    <span class="university-type">Privada</span>
+                </div>
+                <div class="university-card" data-university-id="9">
+                <div class="university-logo">
+                    <img src="image/UDLA.png" alt="Logo Universidad de las Américas">
+                    </div>
+                    <h4>Universidad de las Américas</h4>
+                    <p>Quito</p>
+                    <span class="university-type">Privada</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <h3>UniCarreras Ecuador</h3>
+            <p>Tu guía confiable para elegir la carrera universitaria perfecta en Ecuador</p>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DESARROLLADORES</h4>
+                    <p>Douglas Cornejo - Sarely Velez - Brithany Quiroz</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>UNICARRERAS ECUADOR</p>
+            </div>
+        </div>
+    </footer>
+
+<!-- Modal para detalles de carrera -->
+<div class="modal" id="careerModal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <div class="modal-header" id="modalHeader">
+            <!-- Contenido del header se carga dinámicamente -->
+        </div>
+        <div class="modal-body" id="modalBody">
+            <!-- Contenedor principal: imagen a la izquierda, información a la derecha -->
+            <div class="modal-content-wrapper">
+                <!-- Columna izquierda: Imagen -->
+                <div class="modal-image-column" id="modalImageContainer">
+                    <!-- Aquí se cargará la imagen o el placeholder -->
+                    <div class="modal-image-container">
+                        <div class="modal-image-placeholder">
+                            <div>
+                                <i class="fas fa-graduation-cap"></i>
+                                <p>Imagen de la carrera</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                
+                <!-- Columna derecha: Información -->
+                <div class="modal-info-column">
+                    <!-- Título y universidad -->
+                    <div class="modal-info-title" id="modalInfoTitle">
+                        <!-- Se cargará dinámicamente -->
+                    </div>
+                    
+                    <!-- Tabla de detalles -->
+                    <div class="modal-info-details" id="modalInfoDetails">
+                        <!-- Se cargará dinámicamente -->
+                    </div>
+                    
+                    <!-- Área de estudio -->
+                    <div class="modal-area-section" id="modalAreaSection">
+                        <!-- Se cargará dinámicamente -->
+                    </div>
+                    
+                    <!-- Contenido adicional (descripción, requisitos, etc.) -->
+                    <div class="modal-additional-content" id="modalAdditionalContent">
+                        <!-- Se cargará dinámicamente -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para detalles de universidad -->
+<div class="modal" id="universityModal">
+    <div class="modal-content">
+        <span class="close" id="closeUniversityModal">&times;</span>
+        <div class="modal-header" id="universityModalHeader">
+            <!-- Contenido del header se carga dinámicamente -->
+        </div>
+        <div class="modal-body">
+            <!-- Estructura centrada: logo arriba, info abajo -->
+            <div class="university-modal-content">
+                <!-- Logo centrado -->
+                <div class="university-logo-center">
+                    <div class="university-logo-large" id="universityLogoLarge">
+                        <!-- Logo se cargará dinámicamente aquí -->
+                        <div class="university-logo-placeholder-large">
+                            <i class="fas fa-university"></i>
+                            <p>Logo de la universidad</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Título y ciudad debajo del logo -->
+                    <div class="university-info-below-logo">
+                        <div class="university-info-title-below" id="universityInfoTitle">
+                            <!-- Se cargará dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tabla de información -->
+                <div class="university-info-details-below" id="universityInfoDetails">
+                    <!-- Se cargará dinámicamente -->
+                </div>
+                
+                <!-- Carreras destacadas -->
+                <div class="university-carreras-section" id="universityCarrerasSection">
+                    <!-- Se cargará dinámicamente -->
+                </div>
+                
+                <!-- Contenido adicional -->
+                <div class="university-additional-content-below" id="universityAdditionalContent">
+                    <!-- Se cargará dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+
+</html>

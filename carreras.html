@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniCarreras Ecuador - Portal de Carreras Universitarias</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/data.js"></script>
+    <script src="js/app.js" defer></script>
+    <script src="js/shared.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1><span class="uni">Uni</span><span class="carreras">Carreras</span> Ecuador</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="carreras.html">Carreras</a>
+                <a href="universidades.html">Universidades</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+
+    <section class="search-section" id="search">
+        <div class="container">
+            <h3>Busca la carrera perfecta para ti</h3>
+            <div class="search-container">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar carreras (ej: Medicina, Ingeniería...)">
+                </div>
+                <div class="filters">
+                    <select id="areaFilter">
+                        <option value="">Todas las áreas</option>
+                        <option value="ciencias-salud">Ciencias de la Salud</option>
+                        <option value="ingenieria">Ingeniería y Tecnología</option>
+                        <option value="ciencias-sociales">Ciencias Sociales</option>
+                        <option value="arte-humanidades">Arte y Humanidades</option>
+                        <option value="ciencias-naturales">Ciencias Naturales</option>
+                        <option value="educacion">Educación</option>
+                        <option value="economia-negocios">Economía y Negocios</option>
+                    </select>
+                    <select id="ciudadFilter">
+                        <option value="">Todas las ciudades</option>
+                        <option value="quito">Quito</option>
+                        <option value="guayaquil">Guayaquil</option>
+                        <option value="cuenca">Cuenca</option>
+                        <option value="ambato">Ambato</option>
+                        <option value="riobamba">Riobamba</option>
+                        <option value="loja">Loja</option>
+                        <option value="machala">Machala</option>
+                        <option value="portoviejo">Portoviejo</option>
+                        <option value="esmeraldas">Esmeraldas</option>
+                    </select>
+                    <select id="modalidadFilter">
+                        <option value="">Todas las modalidades</option>
+                        <option value="presencial">Presencial</option>
+                        <option value="semipresencial">Semipresencial</option>
+                        <option value="virtual">Virtual</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="results-section" id="carreras">
+        <div class="container">
+            <div class="results-header">
+                <h3>Resultados de búsqueda</h3>
+                <span class="results-count" id="resultsCount">Mostrando todas las carreras</span>
+            </div>
+            <div class="results-grid" id="resultsGrid">
+                <!-- Los resultados se cargarán dinámicamente -->
+            </div>
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h4>No se encontraron resultados</h4>
+                <p>Intenta ajustar tus filtros de búsqueda</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <h3>UniCarreras Ecuador</h3>
+            <p>Tu guía confiable para elegir la carrera universitaria perfecta en Ecuador</p>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DESARROLLADORES</h4>
+                    <p>Douglas Cornejo - Sarely Velez - Brithany Quiroz</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>UNICARRERAS ECUADOR</p>
+            </div>
+        </div>
+    </footer>
+
+<!-- Modal para detalles de carrera -->
+<div class="modal" id="careerModal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <div class="modal-header" id="modalHeader">
+            <!-- Contenido del header se carga dinámicamente -->
+        </div>
+        <div class="modal-body" id="modalBody">
+            <!-- Contenedor principal: imagen a la izquierda, información a la derecha -->
+            <div class="modal-content-wrapper">
+                <!-- Columna izquierda: Imagen -->
+                <div class="modal-image-column" id="modalImageContainer">
+                    <!-- Aquí se cargará la imagen o el placeholder -->
+                    <div class="modal-image-container">
+                        <div class="modal-image-placeholder">
+                            <div>
+                                <i class="fas fa-graduation-cap"></i>
+                                <p>Imagen de la carrera</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                
+                <!-- Columna derecha: Información -->
+                <div class="modal-info-column">
+                    <!-- Título y universidad -->
+                    <div class="modal-info-title" id="modalInfoTitle">
+                        <!-- Se cargará dinámicamente -->
+                    </div>
+                    
+                    <!-- Tabla de detalles -->
+                    <div class="modal-info-details" id="modalInfoDetails">
+                        <!-- Se cargará dinámicamente -->
+                    </div>
+                    
+                    <!-- Área de estudio -->
+                    <div class="modal-area-section" id="modalAreaSection">
+                        <!-- Se cargará dinámicamente -->
+                    </div>
+                    
+                    <!-- Contenido adicional (descripción, requisitos, etc.) -->
+                    <div class="modal-additional-content" id="modalAdditionalContent">
+                        <!-- Se cargará dinámicamente -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para detalles de universidad -->
+<div class="modal" id="universityModal">
+    <div class="modal-content">
+        <span class="close" id="closeUniversityModal">&times;</span>
+        <div class="modal-header" id="universityModalHeader">
+            <!-- Contenido del header se carga dinámicamente -->
+        </div>
+        <div class="modal-body">
+            <!-- Estructura centrada: logo arriba, info abajo -->
+            <div class="university-modal-content">
+                <!-- Logo centrado -->
+                <div class="university-logo-center">
+                    <div class="university-logo-large" id="universityLogoLarge">
+                        <!-- Logo se cargará dinámicamente aquí -->
+                        <div class="university-logo-placeholder-large">
+                            <i class="fas fa-university"></i>
+                            <p>Logo de la universidad</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Título y ciudad debajo del logo -->
+                    <div class="university-info-below-logo">
+                        <div class="university-info-title-below" id="universityInfoTitle">
+                            <!-- Se cargará dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tabla de información -->
+                <div class="university-info-details-below" id="universityInfoDetails">
+                    <!-- Se cargará dinámicamente -->
+                </div>
+                
+                <!-- Carreras destacadas -->
+                <div class="university-carreras-section" id="universityCarrerasSection">
+                    <!-- Se cargará dinámicamente -->
+                </div>
+                
+                <!-- Contenido adicional -->
+                <div class="university-additional-content-below" id="universityAdditionalContent">
+                    <!-- Se cargará dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+
+</html>
