@@ -36,7 +36,10 @@ body {
     padding: 0 1rem;
 }
 
-/* Header */
+/* ============================================= */
+/* HEADER */
+/* ============================================= */
+
 .header {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -72,7 +75,6 @@ body {
     font-size: 1.25rem;
     color: rgb(224, 222, 54);
 }
-
 
 .uni {
     color: rgb(240, 109, 109);
@@ -123,1293 +125,180 @@ body {
     color: var(--text-primary);
 }
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
-    color: white;
-    padding: 8rem 2rem 4rem;
-    text-align: center;
+/* ============================================= */
+/* CARRUSEL FULL WIDTH */
+/* ============================================= */
+
+.fullwidth-carousel-section {
     margin-top: 60px;
-}
-
-.hero-content,
-.hero-stats {
-  position: absolute;
-  z-index: 2;
-  text-align: center;
-  width: 100%;
-}
-
-.hero-content {
-  top: 28%;
-}
-
-.hero-content h2 {
-    font-size: 3.2rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-.hero-content p {
-    font-size: 1.30rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cta-button {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.cta-button:hover {
-    background: rgba(255, 255, 255, 0.25);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
-}
-
-.hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    margin-top: 4rem;
-    bottom: 10%;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.stat {
-    text-align: center;
-}
-
-.stat-number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 0.5rem;
-}
-
-.stat-label {
-    font-size: 1rem;
-    opacity: 0.8;
-}
-
-/* --- CONTENEDOR PRINCIPAL --- */
-#inicio {
-  position: relative;
-  width: 100%;
-  height: 70vh; 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: background-image 1.5s ease-in-out; /* transición suave */
-  overflow: hidden;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#inicio::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.432); /* ajusta el 0.6 para más/menos oscuridad */
-  z-index: 1;
-}
-
-#inicio ul {
-  display: none;
-}
-
-/* Search Section */
-
-
-.search-section {
-    background: var(--secondary-color);
-    padding: 4rem 0;
-}
-
-.search-section h3 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: var(--text-primary);
-}
-
-.search-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.search-bar {
     position: relative;
-    margin-bottom: 2rem;
-}
-
-.search-bar i {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-secondary);
-}
-
-.search-bar input {
-    width: 100%;
-    padding: 1rem 1rem 1rem 3rem;
-    border: 2px solid var(--border-color);
-    border-radius: 50px;
-    font-size: 1rem;
-    transition: var(--transition);
-    background: white;
-}
-
-.search-bar input:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-}
-
-.filters {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-
-.filters select {
-    padding: 0.75rem;
-    border: 2px solid var(--border-color);
-    border-radius: 8px;
-    font-size: 0.95rem;
-    background: white;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.filters select:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-/* Results Section */
-.results-section {
-    padding: 4rem 0;
-}
-
-.results-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.results-header h3 {
-    font-size: 1.75rem;
-    color: var(--text-primary);
-}
-
-.results-count {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-}
-
-.results-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 1.5rem;
-}
-
-.career-card {
-    background: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border-color);
-    transition: var(--transition);
-    cursor: pointer;
-    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     overflow: hidden;
 }
 
-.career-card::before {
-    content: '';
+.fullwidth-carousel {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.fullwidth-carousel-slide {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--yellow-color), rgb(248, 248, 142));
-}
-
-.career-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-}
-
-.career-card h4 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
-}
-
-.career-info {
-    margin-bottom: 1rem;
-}
-
-.career-info p {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin-bottom: 0.25rem;
-}
-
-.career-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-
-.tag {
-    background: var(--secondary-color);
-    color: var(--text-primary);
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    border: 1px solid var(--border-color);
-}
-
-.tag.area {
-    background: rgba(37, 99, 235, 0.1);
-    color: var(--primary-color);
-    border-color: rgba(37, 99, 235, 0.2);
-}
-
-.no-results {
-    text-align: center;
-    padding: 4rem 2rem;
-    color: var(--text-secondary);
-}
-
-.no-results i {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    opacity: 0.5;
-}
-
-.no-results h4 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
-}
-
-/* Universities Section */
-.universities-section {
-    background: var(--secondary-color);
-    padding: 4rem 0;
-}
-
-.universities-section h3 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 3rem;
-    color: var(--text-primary);
-}
-
-.universities-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.university-card {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border-color);
-    transition: var(--transition);
-    cursor: pointer;
-}
-
-.university-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-}
-
-.university-logo {
-    width: 80px;
-    height: 80px;
-    background: var(--secondary-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1rem;
-    color: var(--primary-color);
-    font-size: 2rem;
-}
-
-.university-logo img{
-    width: 100%;
     height: 100%;
-    object-fit: contain;
-    padding: 10px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-#logo-UC{
-    width: 90px;
-    height: 110px;
+.fullwidth-carousel-slide.active {
+    opacity: 1;
 }
 
-.university-card h4 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
-    line-height: 1.3;
-}
-
-.university-card p {
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
-}
-
-.university-type {
-    display: inline-block;
-    background: var(--primary-color);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-}
-
-/* Contact Section */
-.contact-section {
-    padding: 4rem 0;
-    text-align: center;
-}
-
-.contact-section h3 {
-    font-size: 40px;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-}
-
-.contact-section p {
-    font-size: 20px;
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-primary);
-}
-
-.contact-item i {
-    color: var(--primary-color);
-    font-size: 1.25rem;
-}
-
-/* Footer */
-.footer {
-    background: var(--red-color);
-    color: white;
-    padding: 3rem 0 1rem;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.footer-section h4 {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
-.footer-section p {
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.6;
-}
-
-.footer-section ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-.footer-section ul li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-section ul li a {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.footer-section ul li a:hover {
-    color: white;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding-top: 1rem;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-}
-
-.modal-content {
-    background: white;
-    margin: 5% auto;
-    padding: 0;
-    border-radius: 16px;
-    width: 90%;
-    max-width: 1200px; /* Aumentamos el ancho máximo para acomodar la imagen */
-    max-height: 80vh;
-    overflow-y: auto;
-    position: relative;
-    animation: modalSlideIn 0.3s ease-out;
-}
-
-@keyframes modalSlideIn {
-    from {
-        transform: scale(0.7);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 1;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-}
-
-.close:hover {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.modal-body {
-    padding: 2rem;
-}
-
-.modal-header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--danger-color) 70%);
-    color: white;
-    padding: 2rem 2rem 1rem;
-    border-radius: 16px 16px 0 0;
-}
-
-.modal-header h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-/* ============================================= */
-/* NUEVA ESTRUCTURA PARA MODAL COMO IMAGEN DEL TIGRE */
-/* ============================================= */
-
-.modal-content-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    margin: 1.5rem 0;
-}
-
-/* Columna de imagen (izquierda) */
-.modal-image-column {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.modal-image-container {
-    width: 100%;
-    background-color: #f0f0f0;
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: var(--shadow);
-    aspect-ratio: 1/1; /* Hace la imagen cuadrada */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-image {
+.fullwidth-carousel-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 12px;
+    object-position: center;
+    filter: brightness(0.6);
 }
 
-.modal-image-placeholder {
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
-    color: var(--text-secondary);
-    text-align: center;
-    padding: 2rem;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
 }
 
-.modal-image-placeholder i {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-/* Información de la imagen debajo */
-.modal-image-info {
-    background: var(--secondary-color);
-    padding: 1rem;
-    border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
-}
-
-.modal-image-info p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-}
-
-/* Columna de información (derecha) - Estilo de tabla como en imagen del tigre */
-.modal-info-column {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-/* Título principal de la carrera */
-.modal-info-title {
-    margin-bottom: 0.5rem;
-}
-
-.modal-info-title h4 {
-    font-size: 1.8rem;
-    color: var(--text-primary);
-    margin-bottom: 0.25rem;
-}
-
-.modal-info-title p {
-    color: var(--text-secondary);
-    font-size: 1rem;
-    margin: 0;
-}
-
-/* Tabla de información específica */
-.modal-info-details {
-    width: 100%;
-}
-
-.modal-info-details table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 0.5rem;
-}
-
-.modal-info-details tr {
-    border-bottom: 1px solid var(--border-color);
-}
-
-.modal-info-details tr:last-child {
-    border-bottom: none;
-}
-
-.modal-info-details td {
-    padding: 0.75rem 0;
-    vertical-align: top;
-}
-
-.modal-info-details td:first-child {
-    width: 40%;
-    color: var(--danger-color);
-    font-weight: 600;
-    padding-right: 1rem;
-}
-
-.modal-info-details td:last-child {
-    width: 60%;
-    color: var(--text-primary);
-    font-weight: 500;
-}
-
-/* Sección de área */
-.modal-area-section {
-    background: rgba(37, 99, 235, 0.05);
-    padding: 1rem;
-    border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
-}
-
-.modal-area-section strong {
-    color: var(--danger-color);
-    display: block;
-    margin-bottom: 0.25rem;
-    font-size: 0.95rem;
-}
-
-.modal-area-section span {
-    color: var(--text-primary);
-    font-weight: 500;
-}
-
-/* Contenido adicional (descripción, requisitos, etc.) */
-.modal-additional-content {
-    margin-top: 0.5rem;
-}
-
-.modal-additional-content h5 {
-    color: var(--primary-color);
-    margin: 1.5rem 0 0.75rem 0;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-.modal-additional-content p {
-    line-height: 1.6;
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
-}
-
-/* ============================================= */
-/* ESTILOS ESPECÍFICOS PARA MODAL DE UNIVERSIDADES */
-/* ============================================= */
-
-#universityModal .modal-content {
+.overlay-content {
     max-width: 800px;
-}
-
-#universityModal .modal-header {
-    background: linear-gradient(135deg, var(--yellow-color) 0%, var(--primary-dark) 100%);
-}
-
-/* Contenedor principal del modal de universidad */
-.university-modal-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-    padding: 2rem 0;
-}
-
-/* Contenedor del logo centrado */
-.university-logo-center {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-/* Logo grande en el centro */
-.university-logo-large {
-    width: 180px;
-    height: 180px;
-    background: var(--secondary-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    box-shadow: var(--shadow);
-    border: 5px solid var(--primary-color);
-    overflow: hidden;
-}
-
-.university-logo-large img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 20px;
-    background: white;
-}
-
-.university-logo-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 15px;
-}
-
-.university-logo-placeholder-large {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-light) 30%);
     color: white;
-    text-align: center;
-    border-radius: 50%;
+    padding: 2rem;
+    animation: fadeInUp 1s ease-out;
 }
 
-.university-logo-placeholder-large i {
+.overlay-content h2 {
     font-size: 3.5rem;
-    margin-bottom: 0.5rem;
-    color: white;
-}
-
-.university-logo-placeholder-large span {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: white;
-}
-
-.university-logo-placeholder-large p {
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-/* Información de la universidad debajo del logo */
-.university-info-below-logo {
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.university-info-title-below {
-    margin-bottom: 1.5rem;
-}
-
-.university-info-title-below h4 {
-    font-size: 1.8rem;
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
-}
-
-.university-info-title-below p {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-    margin: 0;
-    font-weight: 500;
-}
-
-/* Tabla de información de la universidad (centrada) */
-.university-info-details-below {
-    width: 100%;
-    margin: 2rem auto;
-}
-
-.university-info-details-below table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0 auto;
-    text-align: left;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-}
-
-.university-info-details-below tr {
-    border-bottom: 1px solid var(--border-color);
-}
-
-.university-info-details-below tr:last-child {
-    border-bottom: none;
-}
-
-.university-info-details-below td {
-    padding: 1rem;
-    vertical-align: top;
-}
-
-.university-info-details-below td:first-child {
-    width: 35%;
-    color: var(--danger-color);
-    font-weight: 600;
-    background-color: rgba(239, 68, 68, 0.05);
-    border-right: 2px solid var(--border-color);
-}
-
-.university-info-details-below td:last-child {
-    width: 65%;
-    color: var(--text-primary);
-    font-weight: 500;
-}
-
-/* Sección de carreras destacadas */
-.university-carreras-section {
-    background: rgba(37, 99, 235, 0.05);
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-top: 1rem;
-    border-left: 4px solid var(--primary-color);
-    width: 100%;
-}
-
-.university-carreras-section h5 {
-    color: var(--primary-color);
-    margin-bottom: 0.75rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.university-carreras-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-}
-
-.university-carrera-tag {
-    background: var(--primary-color);
-    color: white;
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.university-carrera-tag:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-}
-
-/* Contenido adicional para universidades */
-.university-additional-content-below {
-    width: 100%;
-    max-width: 600px;
-    margin-top: 2rem;
-    text-align: center;
-}
-
-.university-additional-content-below h5 {
-    color: var(--primary-color);
-    margin: 1.5rem 0 0.75rem 0;
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-align: center;
-}
-
-.university-additional-content-below p {
-    line-height: 1.6;
-    color: var(--text-secondary);
+    font-weight: 800;
     margin-bottom: 1rem;
-    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    line-height: 1.2;
 }
 
-/* Botón de visita a la página */
-.university-visit-button {
+.overlay-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.4;
+}
+
+.carousel-cta {
     display: inline-block;
     background: var(--primary-color);
     color: white;
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 2.5rem;
     border-radius: 50px;
+    font-size: 1.2rem;
     font-weight: 600;
     text-decoration: none;
-    margin-top: 1rem;
     transition: var(--transition);
-    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     cursor: pointer;
 }
 
-.university-visit-button:hover {
+.carousel-cta:hover {
     background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
-/* Estilos para logos responsivos */
-@media (max-width: 768px) {
-    .university-logo-large {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .university-logo-placeholder-large i {
-        font-size: 2.8rem;
-    }
-    
-    .university-logo-placeholder-large span {
-        font-size: 2rem;
-    }
-    
-    .university-info-title-below h4 {
-        font-size: 1.5rem;
-    }
-    
-    .university-info-details-below table {
-        display: block;
-    }
-    
-    .university-info-details-below tr {
-        display: block;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid var(--border-color);
-    }
-    
-    .university-info-details-below td {
-        display: block;
-        width: 100% !important;
-        padding: 0.5rem 0;
-        background-color: transparent !important;
-        border-right: none !important;
-    }
-    
-    .university-info-details-below td:first-child {
-        color: var(--danger-color);
-        font-weight: 600;
-        margin-bottom: 0.25rem;
-        border-right: none;
-    }
-    
-    .university-additional-content-below h5 {
-        font-size: 1.2rem;
-    }
-    
-    .university-carreras-list {
-        justify-content: center;
-    }
+.carousel-cta i {
+    margin-right: 0.5rem;
 }
 
-@media (max-width: 480px) {
-    .university-logo-large {
-        width: 120px;
-        height: 120px;
-    }
-    
-    .university-logo-placeholder-large i {
-        font-size: 2.5rem;
-    }
-    
-    .university-logo-placeholder-large span {
-        font-size: 1.8rem;
-    }
-    
-    .university-info-title-below h4 {
-        font-size: 1.3rem;
-    }
-    
-    .university-info-title-below p {
-        font-size: 1rem;
-    }
-    
-    .university-additional-content-below h5 {
-        font-size: 1.1rem;
-    }
-    
-    .university-carrera-tag {
-        font-size: 0.8rem;
-        padding: 0.3rem 0.8rem;
-    }
-}
-/* ============================================= */
-/* RESPONSIVE DESIGN */
-/* ============================================= */
-
-@media (max-width: 1024px) {
-    .modal-content-wrapper {
-        gap: 2rem;
-    }
-    
-    .modal-info-title h4 {
-        font-size: 1.6rem;
-    }
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 2rem;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
 }
 
-@media (max-width: 900px) {
-    .modal-content-wrapper {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .modal-image-column {
-        order: 1;
-    }
-    
-    .modal-info-column {
-        order: 2;
-    }
-    
-    .modal-image-container {
-        max-height: 400px;
-    }
+.carousel-arrow:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-50%) scale(1.1);
 }
 
-@media (max-width: 768px) {
-    .nav {
-        display: none;
-    }
-    
-    .menu-toggle {
-        display: block;
-    }
-    
-    .hero-content h2 {
-        font-size: 2rem;
-    }
-    
-    .hero-content p {
-        font-size: 1rem;
-    }
-    
-    .hero-stats {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    
-    .results-header {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-    
-    .contact-info {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-    
-    .modal-content {
-        margin: 10% auto;
-        width: 95%;
-    }
-    
-    .universities-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .modal-content-wrapper {
-        gap: 1.5rem;
-    }
-    
-    .modal-info-title h4 {
-        font-size: 1.4rem;
-    }
-    
-    .modal-info-details table {
-        display: block;
-    }
-    
-    .modal-info-details tr {
-        display: block;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid var(--border-color);
-    }
-    
-    .modal-info-details td {
-        display: block;
-        width: 100% !important;
-        padding: 0.25rem 0;
-    }
-    
-    .modal-info-details td:first-child {
-        color: var(--danger-color);
-        font-weight: 600;
-        margin-bottom: 0.25rem;
-    }
-    
-    .modal-additional-content h5 {
-        font-size: 1.2rem;
-    }
+.prev-arrow {
+    left: 40px;
 }
 
-@media (max-width: 480px) {
-    .container {
-        padding: 0 0.75rem;
-    }
-    
-    .hero {
-        padding: 6rem 1rem 3rem;
-    }
-    
-    .search-section,
-    .results-section,
-    .universities-section,
-    .contact-section {
-        padding: 3rem 0;
-    }
-    
-    .results-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .universities-grid {
-        grid-template-columns: 1fr;
-    }
+.next-arrow {
+    right: 40px;
+}
 
-    .modal-body {
-        padding: 1.5rem;
-    }
-    
-    .modal-content-wrapper {
-        gap: 1.5rem;
-    }
-    
-    .modal-header {
-        padding: 1.5rem 1.5rem 1rem;
-    }
-    
-    .modal-header h3 {
-        font-size: 1.25rem;
-    }
-    
-    .modal-image-placeholder {
-        height: 200px;
-        padding: 1.5rem;
-    }
-    
-    .modal-image-placeholder i {
-        font-size: 2.5rem;
-    }
-    
-    .modal-info-title h4 {
-        font-size: 1.25rem;
-    }
-    
-    .modal-info-title p {
-        font-size: 0.9rem;
-    }
-    
-    .modal-additional-content h5 {
-        font-size: 1.1rem;
-    }
+.carousel-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 20;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.3);
+    border-color: white;
+}
+
+.dot:hover {
+    background: white;
+    transform: scale(1.2);
 }
 
 /* ============================================= */
-/* ANIMACIONES ADICIONALES */
+/* SECCIÓN DE PROPÓSITO */
 /* ============================================= */
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.modal-image-container {
-    animation: fadeIn 0.5s ease-out 0.3s both;
-}
-
-.modal-info-column {
-    animation: fadeIn 0.5s ease-out 0.5s both;
-}
-
-/* Animaciones CSS adicionales para las tarjetas */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.career-card {
-    opacity: 0;
-}
-
-.career-description {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin: 1rem 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-/* Menú móvil */
-@media (max-width: 768px) {
-    .nav.show {
-        display: flex;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: white;
-        flex-direction: column;
-        padding: 1rem;
-        box-shadow: var(--shadow-lg);
-        border-top: 1px solid var(--border-color);
-    }
-    
-    .nav.show a {
-        padding: 0.75rem 0;
-        border-bottom: 1px solid var(--border-color);
-    }
-    
-    .nav.show a:last-child {
-        border-bottom: none;
-    }
-}
-
-/* Estilos para la nueva sección de propósito */
 
 .purpose-section {
     padding: 5rem 0;
@@ -1418,7 +307,7 @@ body {
 
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .section-title-wrapper {
@@ -1451,6 +340,42 @@ body {
     line-height: 1.6;
 }
 
+/* Estadísticas dentro de propósito */
+.purpose-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 3rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.purpose-stat {
+    text-align: center;
+    padding: 1rem;
+    min-width: 120px;
+}
+
+.purpose-stat-number {
+    display: block;
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    line-height: 1;
+}
+
+.purpose-stat-label {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .purpose-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -1462,7 +387,7 @@ body {
     background: white;
     border-radius: 15px;
     padding: 2rem;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--border-color);
 }
@@ -1553,7 +478,7 @@ body {
     background: white;
     border-radius: 15px;
     padding: 3rem;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow);
     margin-bottom: 4rem;
 }
 
@@ -1581,12 +506,6 @@ body {
 .feature-item:hover {
     background: rgba(255, 245, 130, 0.952);
     transform: translateY(-5px);
-}
-
-.feature-item:hover i,
-.feature-item:hover h4,
-.feature-item:hover p {
-    color: white;
 }
 
 .feature-item i {
@@ -1647,8 +566,1792 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive */
+/* ============================================= */
+/* BÚSQUEDA Y FILTROS */
+/* ============================================= */
+
+.search-section {
+    background: var(--secondary-color);
+    padding: 4rem 0;
+}
+
+.search-section h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+.search-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-bar {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.search-bar i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: var(--transition);
+    background: white;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.filters select {
+    padding: 0.75rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: white;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filters select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* ============================================= */
+/* RESULTADOS DE BÚSQUEDA */
+/* ============================================= */
+
+.main-content-section {
+    padding: 2rem 0 4rem 0;
+    background: var(--secondary-color);
+}
+
+.content-layout {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2.5rem;
+    margin-top: 1rem;
+    align-items: flex-start;
+}
+
+.main-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.results-section {
+    padding: 2rem 0;
+}
+
+.results-header {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.results-header h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.results-header h3::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 24px;
+    background: var(--danger-color);
+    border-radius: 2px;
+    margin-right: 0.5rem;
+}
+
+.results-count {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    background: var(--secondary-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 0;
+}
+
+.career-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.career-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--yellow-color), rgb(248, 248, 142));
+}
+
+.career-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.career-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.career-info {
+    margin-bottom: 1rem;
+}
+
+.career-info p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.career-description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 1rem 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.career-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    background: var(--secondary-color);
+    color: var(--text-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid var(--border-color);
+}
+
+.tag.area {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+.no-results {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-secondary);
+}
+
+.no-results i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.no-results h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+/* ============================================= */
+/* BARRA LATERAL Y ANUNCIOS */
+/* ============================================= */
+
+.sidebar-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: sticky;
+    top: 100px;
+}
+
+.advertisement {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 230, 0, 0.2);
+    transition: var(--transition);
+    margin-top: 0;
+}
+
+.advertisement:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.ad-header {
+    background: linear-gradient(135deg, var(--danger-color) 0%, #c53030 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.ad-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--yellow-color) 0%, rgba(255, 230, 0, 0.5) 100%);
+}
+
+.ad-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.ad-header i {
+    color: var(--yellow-color);
+}
+
+.ad-content {
+    padding: 0;
+}
+
+.ad-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition);
+}
+
+.advertisement:hover .ad-image {
+    transform: scale(1.02);
+}
+
+.ad-body {
+    padding: 1.5rem;
+    background: white;
+}
+
+.ad-body h5 {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.ad-body p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.ad-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.ad-features li {
+    padding: 0.5rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    background: var(--secondary-color);
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.ad-features li i {
+    color: var(--success-color);
+    font-size: 0.8rem;
+    min-width: 16px;
+}
+
+.ad-button {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.ad-button:hover {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #1e40af 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+}
+
+.sidebar-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.sidebar-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.sidebar-card h4 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.sidebar-card h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.tip-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.75rem;
+    background: var(--secondary-color);
+    border-radius: 8px;
+    transition: var(--transition);
+    border-left: 4px solid transparent;
+}
+
+.tip-item:hover {
+    background: rgba(37, 99, 235, 0.05);
+    transform: translateX(5px);
+    border-left-color: var(--primary-color);
+}
+
+.tip-item i {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    min-width: 20px;
+}
+
+.tip-item-content {
+    flex: 1;
+}
+
+.tip-item h5 {
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.tip-item p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.stats-card {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: white;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-card h4 {
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.stats-card h4 i {
+    color: var(--yellow-color);
+}
+
+.stats-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--yellow-color);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================= */
+/* UNIVERSIDADES */
+/* ============================================= */
+
+.universities-section {
+    background: var(--secondary-color);
+    padding: 4rem 0;
+}
+
+.universities-section h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+}
+
+.universities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.university-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.university-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.university-logo {
+    width: 80px;
+    height: 80px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.university-logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+}
+
+#logo-UC{
+    width: 90px;
+    height: 110px;
+}
+
+.university-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.university-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.university-type {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* ============================================= */
+/* CONTACTO Y FOOTER */
+/* ============================================= */
+
+.contact-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.contact-section h3 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.contact-section p {
+    font-size: 20px;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {
+    background: var(--red-color);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.footer-section p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ============================================= */
+/* MODALES */
+/* ============================================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: white;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 1200px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.close:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--danger-color) 70%);
+    color: white;
+    padding: 2rem 2rem 1rem;
+    border-radius: 16px 16px 0 0;
+}
+
+.modal-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin: 1.5rem 0;
+}
+
+.modal-image-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-image-container {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow);
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.modal-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 2rem;
+}
+
+.modal-image-placeholder i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.modal-info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.modal-info-title {
+    margin-bottom: 0.5rem;
+}
+
+.modal-info-title h4 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.modal-info-title p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.modal-info-details {
+    width: 100%;
+}
+
+.modal-info-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+.modal-info-details tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-info-details td {
+    padding: 0.75rem 0;
+    vertical-align: top;
+}
+
+.modal-info-details td:first-child {
+    width: 40%;
+    color: var(--danger-color);
+    font-weight: 600;
+    padding-right: 1rem;
+}
+
+.modal-info-details td:last-child {
+    width: 60%;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.modal-area-section {
+    background: rgba(37, 99, 235, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.modal-area-section strong {
+    color: var(--danger-color);
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+}
+
+.modal-additional-content {
+    margin-top: 0.5rem;
+}
+
+.modal-additional-content h5 {
+    color: var(--primary-color);
+    margin: 1.5rem 0 0.75rem 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* Modal de universidad específico */
+#universityModal .modal-content {
+    max-width: 800px;
+}
+
+#universityModal .modal-header {
+    background: linear-gradient(135deg, var(--yellow-color) 0%, var(--primary-dark) 100%);
+}
+
+.university-modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.university-logo-center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.university-logo-large {
+    width: 180px;
+    height: 180px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: var(--shadow);
+    border: 5px solid var(--primary-color);
+    overflow: hidden;
+}
+
+.university-logo-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+    background: white;
+}
+
+.university-logo-placeholder-large {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-light) 30%);
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.university-logo-placeholder-large i {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.university-info-below-logo {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.university-info-title-below {
+    margin-bottom: 1.5rem;
+}
+
+.university-info-title-below h4 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.university-info-details-below {
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.university-info-details-below table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: left;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.university-info-details-below tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.university-info-details-below td {
+    padding: 1rem;
+    vertical-align: top;
+}
+
+.university-info-details-below td:first-child {
+    width: 35%;
+    color: var(--danger-color);
+    font-weight: 600;
+    background-color: rgba(239, 68, 68, 0.05);
+    border-right: 2px solid var(--border-color);
+}
+
+.university-carreras-section {
+    background: rgba(37, 99, 235, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border-left: 4px solid var(--primary-color);
+    width: 100%;
+}
+
+.university-carreras-section h5 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.university-carreras-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.university-carrera-tag {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.university-carrera-tag:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.university-additional-content-below {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.university-additional-content-below h5 {
+    color: var(--primary-color);
+    margin: 1.5rem 0 0.75rem 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.university-visit-button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.university-visit-button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ============================================= */
+/* ANIMACIONES */
+/* ============================================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.career-card {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.modal-image-container {
+    animation: fadeIn 0.5s ease-out 0.3s both;
+}
+
+.modal-info-column {
+    animation: fadeIn 0.5s ease-out 0.5s both;
+}
+
+/* ============================================= */
+/* SECCIÓN TOP 10 UNIVERSIDADES */
+/* ============================================= */
+
+.top-universities-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-top: 1px solid var(--border-color);
+}
+
+.top-universities-section .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.top-universities-section .section-title-wrapper {
+    margin-bottom: 2rem;
+}
+
+.top-universities-section .section-subtitle {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(135deg, var(--danger-color) 0%, #c53030 100%);
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.top-universities-section .section-title {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.top-universities-section .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--yellow-color), var(--danger-color));
+    border-radius: 2px;
+}
+
+.top-universities-section .section-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 2rem auto 0;
+    line-height: 1.6;
+}
+
+.ranking-container {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.ranking-table-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ranking-table thead {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+}
+
+.ranking-table th {
+    padding: 1.25rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--primary-dark);
+}
+
+.ranking-table th.rank-col {
+    width: 60px;
+    text-align: center;
+}
+
+.ranking-table th.univ-col {
+    width: auto;
+}
+
+.ranking-table th.type-col,
+.ranking-table th.location-col {
+    width: 120px;
+}
+
+.ranking-table th.highlight-col {
+    width: 250px;
+}
+
+.ranking-table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.ranking-table tbody tr:hover {
+    background: rgba(37, 99, 235, 0.03);
+}
+
+.ranking-table tbody tr:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.01);
+}
+
+.ranking-table tbody tr:nth-child(odd):hover {
+    background: rgba(37, 99, 235, 0.05);
+}
+
+.ranking-table td {
+    padding: 1.25rem 1rem;
+    vertical-align: middle;
+}
+
+.rank-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.univ-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.univ-rank-logo {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+}
+
+.univ-rank-logo i {
+    font-size: 1.5rem;
+}
+
+.univ-rank-logo .gold {
+    color: #FFD700;
+}
+
+.univ-rank-logo .silver {
+    color: #C0C0C0;
+}
+
+.univ-rank-logo .bronze {
+    color: #CD7F32;
+}
+
+.univ-rank-logo .rank-icon {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.univ-rank-details h4 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+}
+
+.univ-rank-details p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge.public {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.badge.private {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--danger-color);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.highlight-tag {
+    display: inline-block;
+    background: rgba(255, 230, 0, 0.1);
+    color: var(--text-primary);
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin: 0.25rem;
+    border: 1px solid rgba(255, 230, 0, 0.3);
+}
+
+.highlight-tag i {
+    margin-right: 0.25rem;
+    color: var(--danger-color);
+}
+
+.ranking-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.ranking-info-card,
+.ranking-stats-card,
+.ranking-tips-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.ranking-card-header {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+    color: white;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.ranking-card-header i {
+    font-size: 1.25rem;
+}
+
+.ranking-card-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.ranking-card-body {
+    padding: 1.5rem;
+}
+
+.ranking-criteria {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ranking-criteria li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.ranking-criteria li i {
+    color: var(--success-color);
+    font-size: 0.9rem;
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.stats-grid .stat-item {
+    text-align: center;
+    padding: 1rem;
+    background: var(--secondary-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.stats-grid .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.stats-grid .stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.3;
+}
+
+.ranking-tips-card .tip-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ranking-tips-card .tip-item:last-child {
+    border-bottom: none;
+}
+
+.ranking-tips-card .tip-item i {
+    color: var(--primary-color);
+    font-size: 1rem;
+    width: 24px;
+    text-align: center;
+}
+
+.ranking-tips-card .tip-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.ranking-footer {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(37, 99, 235, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.ranking-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.ranking-note i {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
+}
+
+.ranking-note p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.ranking-note strong {
+    color: var(--text-primary);
+}
+
+/* Estilos adicionales para la versión actualizada */
+.methodology-note {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: rgba(37, 99, 235, 0.05);
+    border-radius: 6px;
+    border-left: 3px solid var(--primary-color);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.methodology-note i {
+    color: var(--primary-color);
+    margin-top: 0.1rem;
+}
+
+.methodology-note p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.stats-grid .full-width {
+    grid-column: 1 / -1;
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.ranking-note div {
+    flex: 1;
+}
+
+.ranking-note p:first-child {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.ranking-note small {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* Ajustes para los íconos de información */
+.tip-item div {
+    flex: 1;
+}
+
+.tip-item div p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.tip-item i[style*="color"] {
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+}
+
+/* ============================================= */
+/* RESPONSIVE DESIGN */
+/* ============================================= */
+
+/* Responsive para la sección de ranking */
+@media (max-width: 1024px) {
+    .ranking-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .ranking-sidebar {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
+    .top-universities-section .section-title {
+        font-size: 2rem;
+    }
+    
+    .ranking-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .ranking-table thead {
+        display: none;
+    }
+    
+    .ranking-table tbody tr {
+        display: block;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        background: white;
+    }
+    
+    .ranking-table td {
+        display: block;
+        padding: 0.5rem 0;
+        border: none;
+        text-align: left;
+    }
+    
+    .ranking-table td.rank-number {
+        float: left;
+        width: auto;
+        margin-right: 1rem;
+        padding: 0;
+    }
+    
+    .ranking-table td:before {
+        content: attr(data-label);
+        display: inline-block;
+        width: 120px;
+        font-weight: 600;
+        color: var(--danger-color);
+        margin-right: 0.5rem;
+    }
+    
+    .univ-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .highlight-tag {
+        display: block;
+        margin: 0.25rem 0;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-universities-section .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .top-universities-section .section-description {
+        font-size: 1rem;
+    }
+    
+    .ranking-sidebar {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1200px) {
+    .fullwidth-carousel {
+        height: 450px;
+    }
+    
+    .overlay-content h2 {
+        font-size: 3rem;
+    }
+    
+    .overlay-content p {
+        font-size: 1.3rem;
+    }
+    
+    .carousel-arrow {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+    
+    .prev-arrow {
+        left: 25px;
+    }
+    
+    .next-arrow {
+        right: 25px;
+    }
+    
+    .modal-content-wrapper {
+        gap: 2rem;
+    }
+    
+    .modal-info-title h4 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .content-layout {
+        grid-template-columns: 1fr 320px;
+        gap: 2rem;
+    }
+    
+    .ad-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .content-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .sidebar-column {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+    
+    .advertisement {
+        grid-column: 1 / -1;
+    }
+    
+    .modal-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .modal-image-column {
+        order: 1;
+    }
+    
+    .modal-info-column {
+        order: 2;
+    }
+    
+    .modal-image-container {
+        max-height: 400px;
+    }
+    
+    .results-header {
+        order: 1;
+    }
+    
+    .results-grid {
+        order: 2;
+    }
+    
+    .advertisement {
+        order: 3;
+        margin-top: 1rem;
+    }
+    
+    .sidebar-card {
+        order: 4;
+    }
+    
+    .stats-card {
+        order: 5;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .fullwidth-carousel {
+        height: 400px;
+    }
+    
+    .overlay-content {
+        padding: 1.5rem;
+    }
+    
+    .overlay-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .overlay-content p {
+        font-size: 1.2rem;
+    }
+    
+    .carousel-cta {
+        padding: 0.9rem 2rem;
+        font-size: 1.1rem;
+    }
+    
+    .carousel-arrow {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .prev-arrow {
+        left: 15px;
+    }
+    
+    .next-arrow {
+        right: 15px;
+    }
+    
+    .carousel-dots {
+        bottom: 20px;
+    }
+    
+    .dot {
+        width: 14px;
+        height: 14px;
+    }
+    
     .purpose-grid {
         grid-template-columns: 1fr;
     }
@@ -1667,5 +2370,345 @@ body {
     
     .cta-container h3 {
         font-size: 2rem;
+    }
+    
+    .purpose-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        margin: 2rem 0 1.5rem 0;
+    }
+    
+    .purpose-stat {
+        padding: 0.75rem;
+    }
+    
+    .purpose-stat-number {
+        font-size: 2.2rem;
+    }
+    
+    .purpose-stat-label {
+        font-size: 0.9rem;
+    }
+    
+    .content-layout {
+        gap: 1.5rem;
+    }
+    
+    .sidebar-card {
+        padding: 1.25rem;
+    }
+    
+    .ad-body {
+        padding: 1.25rem;
+    }
+    
+    .ad-body h5 {
+        font-size: 1.2rem;
+    }
+    
+    .stats-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .stat-item {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    
+    .stat-value {
+        font-size: 2rem;
+    }
+    
+    .stat-label {
+        font-size: 1rem;
+    }
+    
+    .results-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        padding: 1.25rem;
+    }
+    
+    .results-header h3::before {
+        display: none;
+    }
+    
+    .modal-content {
+        margin: 10% auto;
+        width: 95%;
+    }
+    
+    .universities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content-wrapper {
+        gap: 1.5rem;
+    }
+    
+    .modal-info-title h4 {
+        font-size: 1.4rem;
+    }
+    
+    .modal-info-details table {
+        display: block;
+    }
+    
+    .modal-info-details tr {
+        display: block;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .modal-info-details td {
+        display: block;
+        width: 100% !important;
+        padding: 0.25rem 0;
+    }
+    
+    .modal-info-details td:first-child {
+        color: var(--danger-color);
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+    }
+    
+    .modal-additional-content h5 {
+        font-size: 1.2rem;
+    }
+    
+    .university-logo-large {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .university-logo-placeholder-large i {
+        font-size: 2.8rem;
+    }
+    
+    .university-info-title-below h4 {
+        font-size: 1.5rem;
+    }
+    
+    .university-info-details-below table {
+        display: block;
+    }
+    
+    .university-info-details-below tr {
+        display: block;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .university-info-details-below td {
+        display: block;
+        width: 100% !important;
+        padding: 0.5rem 0;
+        background-color: transparent !important;
+        border-right: none !important;
+    }
+    
+    .university-additional-content-below h5 {
+        font-size: 1.2rem;
+    }
+    
+    .university-carreras-list {
+        justify-content: center;
+    }
+    
+    .nav.show {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: var(--shadow-lg);
+        border-top: 1px solid var(--border-color);
+    }
+    
+    .nav.show a {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .nav.show a:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    .fullwidth-carousel {
+        height: 350px;
+    }
+    
+    .overlay-content h2 {
+        font-size: 2rem;
+    }
+    
+    .overlay-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .carousel-cta {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .carousel-arrow {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+    
+    .dot {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .search-section,
+    .results-section,
+    .universities-section,
+    .contact-section {
+        padding: 3rem 0;
+    }
+    
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .universities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-card {
+        padding: 1rem;
+    }
+    
+    .ad-header {
+        padding: 0.75rem 1rem;
+    }
+    
+    .ad-header h4 {
+        font-size: 1rem;
+    }
+    
+    .ad-body {
+        padding: 1rem;
+    }
+    
+    .ad-body h5 {
+        font-size: 1.1rem;
+    }
+    
+    .ad-image {
+        height: 150px;
+    }
+    
+    .ad-button {
+        padding: 0.85rem;
+        font-size: 0.95rem;
+    }
+    
+    .tip-item {
+        padding: 0.75rem;
+    }
+    
+    .sidebar-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .purpose-stats {
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .purpose-stat-number {
+        font-size: 2rem;
+    }
+    
+    .purpose-stat-label {
+        font-size: 0.85rem;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+    }
+    
+    .modal-content-wrapper {
+        gap: 1.5rem;
+    }
+    
+    .modal-header {
+        padding: 1.5rem 1.5rem 1rem;
+    }
+    
+    .modal-header h3 {
+        font-size: 1.25rem;
+    }
+    
+    .modal-image-placeholder {
+        height: 200px;
+        padding: 1.5rem;
+    }
+    
+    .modal-image-placeholder i {
+        font-size: 2.5rem;
+    }
+    
+    .modal-info-title h4 {
+        font-size: 1.25rem;
+    }
+    
+    .modal-info-title p {
+        font-size: 0.9rem;
+    }
+    
+    .modal-additional-content h5 {
+        font-size: 1.1rem;
+    }
+    
+    .university-logo-large {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .university-logo-placeholder-large i {
+        font-size: 2.5rem;
+    }
+    
+    .university-logo-placeholder-large span {
+        font-size: 1.8rem;
+    }
+    
+    .university-info-title-below h4 {
+        font-size: 1.3rem;
+    }
+    
+    .university-info-title-below p {
+        font-size: 1rem;
+    }
+    
+    .university-additional-content-below h5 {
+        font-size: 1.1rem;
+    }
+    
+    .university-carrera-tag {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.8rem;
     }
 }

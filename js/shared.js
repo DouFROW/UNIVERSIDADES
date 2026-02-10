@@ -12,17 +12,19 @@ function redirigirACarreras() {
 function getAreaLabel(area) {
     const areas = {
         "ciencias-salud": "Ciencias de la Salud",
-        ingenieria: "Ingeniería y Tecnología",
+        "ingenieria": "Ingeniería y Tecnología",
         "ciencias-sociales": "Ciencias Sociales",
         "arte-humanidades": "Arte y Humanidades",
         "ciencias-naturales": "Ciencias Naturales",
-        educacion: "Educación",
+        "educacion": "Educación",
         "economia-negocios": "Economía y Negocios",
     };
     return areas[area] || area;
 }
 
 function getUniversityInitials(name) {
+    if (!name) return "UNI";
+    
     const words = name.split(' ');
     let initials = '';
     
@@ -49,6 +51,8 @@ function getRandomColor() {
 }
 
 function animateCounter(element, target, suffix = "") {
+    if (!element) return;
+    
     let current = 0;
     const increment = target / 50;
     const timer = setInterval(() => {
@@ -68,24 +72,6 @@ function toggleMobileMenu() {
     }
 }
 
-// Lazy loading para imágenes
-function lazyLoadImages() {
-    const images = document.querySelectorAll("img[data-src]");
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove("lazy");
-                imageObserver.unobserve(img);
-            }
-        });
-    });
-
-    images.forEach((img) => imageObserver.observe(img));
-}
-
-// Agregar Esmeraldas al filtro de ciudades
 function agregarEsmeraldasAlFiltro() {
     const ciudadFilter = document.getElementById("ciudadFilter");
     if (ciudadFilter) {

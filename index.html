@@ -24,7 +24,6 @@
                 <a href="index.html">Inicio</a>
                 <a href="carreras.html">Carreras</a>
                 <a href="universidades.html">Universidades</a>
-                <a href="#contacto">Contacto</a>
             </nav>
             <button class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
@@ -32,35 +31,106 @@
         </div>
     </header>
 
-    <section class="hero" id="inicio">
-        <ul>
-            <li> <img src="image/carousel-1.jpg" alt=""> </li>
-            <li> <img src="image/carousel-2.jpeg" alt=""> </li>
-            <li> <img src="image/carousel-3.jpg" alt=""> </li>
-            <li> <img src="image/carousel-4.jpg" alt=""> </li>
-            <li> <img src="image/carousel-5.jpg" alt=""> </li>
-            <li> <img src="image/carousel-6.jpg" alt=""> </li>
-        </ul>
-
-        <div class="hero-content">
-            <h2>Descubre tu futuro académico</h2>
-            <p>Encuentra información completa y actualizada sobre las carreras universitarias disponibles en Ecuador</p>
-            <button class="cta-button" onclick="redirigirACarreras()">
-                Explorar Carreras
+    <!-- Carrusel FULL WIDTH -->
+    <section class="fullwidth-carousel-section">
+        <div class="fullwidth-carousel">
+            <div class="fullwidth-carousel-slide active">
+                <img src="image/carousel-1.jpg" 
+                     alt="Estudiante de medicina" 
+                     loading="eager">
+                <div class="carousel-overlay">
+                    <div class="overlay-content">
+                        <h2>Descubre tu futuro académico</h2>
+                        <p>Encuentra información completa y actualizada sobre las carreras universitarias disponibles en Ecuador</p>
+                        <button class="carousel-cta" onclick="redirigirACarreras()">
+                            <i class="fas fa-search"></i> Explorar Carreras
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="fullwidth-carousel-slide">
+                <img src="image/carousel-2.jpeg" 
+                     alt="Estudiantes universitarios"
+                     loading="lazy">
+                <div class="carousel-overlay">
+                    <div class="overlay-content">
+                        <h2>Tu futuro comienza aquí</h2>
+                        <p>Información actualizada de universidades en 21 ciudades del Ecuador</p>
+                        <button class="carousel-cta" onclick="redirigirACarreras()">
+                            <i class="fas fa-search"></i> Explorar Universidades
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="fullwidth-carousel-slide">
+                <img src="image/carousel-3.jpg" 
+                     alt="Estudiantes en biblioteca"
+                     loading="lazy">
+                <div class="carousel-overlay">
+                    <div class="overlay-content">
+                        <h2>Encuentra tu carrera ideal</h2>
+                        <p>Explora entre más de 150 carreras universitarias en todas las ciudades del Ecuador</p>
+                        <button class="carousel-cta" onclick="redirigirACarreras()">
+                            <i class="fas fa-search"></i> Buscar Carreras
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="fullwidth-carousel-slide">
+                <img src="image/carousel-4.jpg" 
+                     alt="Graduación universitaria"
+                     loading="lazy">
+                <div class="carousel-overlay">
+                    <div class="overlay-content">
+                        <h2>Comienza tu camino profesional</h2>
+                        <p>Toda la información que necesitas para tomar la mejor decisión</p>
+                        <button class="carousel-cta" onclick="redirigirACarreras()">
+                            <i class="fas fa-search"></i> Ver Carreras
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="fullwidth-carousel-slide">
+                <img src="image/carousel-5.jpg" 
+                     alt="Clase universitaria"
+                     loading="lazy">
+                <div class="carousel-overlay">
+                    <div class="overlay-content">
+                        <h2>Educación de calidad en Ecuador</h2>
+                        <p>Descubre las mejores universidades y programas académicos</p>
+                        <button class="carousel-cta" onclick="redirigirACarreras()">
+                            <i class="fas fa-search"></i> Explorar Oportunidades
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="fullwidth-carousel-slide">
+                <img src="image/carousel-6.jpg" 
+                     alt="Campus universitario"
+                     loading="lazy">
+                <div class="carousel-overlay">
+                    <div class="overlay-content">
+                        <h2>Prepara tu futuro hoy</h2>
+                        <p>Accede a información detallada de carreras, requisitos y universidades</p>
+                        <button class="carousel-cta" onclick="redirigirACarreras()">
+                            <i class="fas fa-search"></i> Comenzar Búsqueda
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-arrow prev-arrow" onclick="moveCarousel(-1)" aria-label="Imagen anterior">
+                <i class="fas fa-chevron-left"></i>
             </button>
-        </div>
-        <div class="hero-stats">
-            <div class="stat">
-                <span class="stat-number" id="carrerasCount">150+</span>
-                <span class="stat-label">Carreras</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number" id="universidadesCount">50+</span>
-                <span class="stat-label">Universidades</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number" id="ciudadesCount">21+</span>
-                <span class="stat-label">Ciudades</span>
+            <button class="carousel-arrow next-arrow" onclick="moveCarousel(1)" aria-label="Siguiente imagen">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+                <span class="dot" onclick="goToSlide(3)"></span>
+                <span class="dot" onclick="goToSlide(4)"></span>
+                <span class="dot" onclick="goToSlide(5)"></span>
             </div>
         </div>
     </section>
@@ -77,6 +147,22 @@
                     UniCarreras Ecuador es la plataforma definitiva para estudiantes que buscan información 
                     detallada, actualizada y confiable sobre educación superior en Ecuador.
                 </p>
+            </div>
+
+            <!-- Estadísticas integradas en la sección de propósito -->
+            <div class="purpose-stats">
+                <div class="purpose-stat">
+                    <span class="purpose-stat-number" id="carrerasCount">150+</span>
+                    <span class="purpose-stat-label">Carreras</span>
+                </div>
+                <div class="purpose-stat">
+                    <span class="purpose-stat-number" id="universidadesCount">50+</span>
+                    <span class="purpose-stat-label">Universidades</span>
+                </div>
+                <div class="purpose-stat">
+                    <span class="purpose-stat-number" id="ciudadesCount">21+</span>
+                    <span class="purpose-stat-label">Ciudades</span>
+                </div>
             </div>
 
             <div class="purpose-grid">
@@ -190,79 +276,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Modales -->
-    <div class="modal" id="careerModal">
-        <div class="modal-content">
-            <span class="close" id="closeModal">&times;</span>
-            <div class="modal-header" id="modalHeader">
-                <!-- Contenido del header se carga dinámicamente -->
-            </div>
-            <div class="modal-body" id="modalBody">
-                <div class="modal-content-wrapper">
-                    <div class="modal-image-column" id="modalImageContainer">
-                        <div class="modal-image-container">
-                            <div class="modal-image-placeholder">
-                                <div>
-                                    <i class="fas fa-graduation-cap"></i>
-                                    <p>Imagen de la carrera</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-info-column">
-                        <div class="modal-info-title" id="modalInfoTitle">
-                            <!-- Se cargará dinámicamente -->
-                        </div>
-                        <div class="modal-info-details" id="modalInfoDetails">
-                            <!-- Se cargará dinámicamente -->
-                        </div>
-                        <div class="modal-area-section" id="modalAreaSection">
-                            <!-- Se cargará dinámicamente -->
-                        </div>
-                        <div class="modal-additional-content" id="modalAdditionalContent">
-                            <!-- Se cargará dinámicamente -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" id="universityModal">
-        <div class="modal-content">
-            <span class="close" id="closeUniversityModal">&times;</span>
-            <div class="modal-header" id="universityModalHeader">
-                <!-- Contenido del header se carga dinámicamente -->
-            </div>
-            <div class="modal-body">
-                <div class="university-modal-content">
-                    <div class="university-logo-center">
-                        <div class="university-logo-large" id="universityLogoLarge">
-                            <div class="university-logo-placeholder-large">
-                                <i class="fas fa-university"></i>
-                                <p>Logo de la universidad</p>
-                            </div>
-                        </div>
-                        <div class="university-info-below-logo">
-                            <div class="university-info-title-below" id="universityInfoTitle">
-                                <!-- Se cargará dinámicamente -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="university-info-details-below" id="universityInfoDetails">
-                        <!-- Se cargará dinámicamente -->
-                    </div>
-                    <div class="university-carreras-section" id="universityCarrerasSection">
-                        <!-- Se cargará dinámicamente -->
-                    </div>
-                    <div class="university-additional-content-below" id="universityAdditionalContent">
-                        <!-- Se cargará dinámicamente -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
   
 </body>
 </html>
