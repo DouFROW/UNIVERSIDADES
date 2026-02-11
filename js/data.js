@@ -308,7 +308,7 @@ const carrerasData = [
     requisitos: "Bachillerato, Vocación docente",
     campoLaboral: "Instituciones educativas públicas y privadas, centros de capacitación",
     pagina: "https://uta.edu.ec/educacion-basica",
-    imagen: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80"
+    imagen: "https://itsqmet.edu.ec/wp-content/uploads/2025/03/Carrera-de-educacion-basica-1-1024x683.webp"
   },
   {
     id: 22,
@@ -322,7 +322,7 @@ const carrerasData = [
     requisitos: "Bachillerato, Interés en procesos educativos",
     campoLaboral: "Instituciones educativas, diseño curricular, investigación educativa",
     pagina: "https://www.ult.edu.ec/carreras/pedagogia",
-    imagen: "https://images.unsplash.com/photo-1524178234883-043d5c3f3cf4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80"
+    imagen: "https://concepto.de/wp-content/uploads/2020/06/pedagogia.jpg"
   },
   {
     id: 23,
@@ -494,7 +494,7 @@ const carrerasData = [
     requisitos: "Bachillerato, Condición física adecuada",
     campoLaboral: "Instituciones educativas, clubes deportivos, gimnasios",
     pagina: "https://www.ucuenca.edu.ec/carreras/educacion-fisica",
-    imagen: "https://images.unsplash.com/photo-1549060279-7e168fce7090?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80"
+    imagen: "https://www.unl.edu.ec/sites/default/files/carrera/seccion/2020-08/2_Mesa%20de%20trabajo%201%20%289%29.png"
   },
   {
     id: 35,
@@ -808,7 +808,7 @@ const carrerasData = [
     requisitos: "Bachillerato, condición física adecuada",
     campoLaboral: "Escuelas, clubes deportivos, gimnasios, federaciones",
     pagina: "https://www.ug.edu.ec/educacion-fisica",
-    imagen: "https://images.unsplash.com/photo-1549060279-7e168fce7090?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80"
+    imagen: "https://www.ucuenca.edu.ec/wp-content/uploads/2023/05/slide-deporte-2-1.jpg"
   },
   {
     id: 57,
@@ -838,7 +838,7 @@ const carrerasData = [
     requisitos: "Bachillerato en Ciencias, interés en anatomía",
     campoLaboral: "Hospitales, clínicas de rehabilitación, centros deportivos",
     pagina: "https://www.ucuenca.edu.ec/terapia-fisica",
-    imagen: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80"
+    imagen: "https://sportsmedicinesystems.com/wp-content/uploads/2020/01/terapia-fisica.jpg"
   },
   {
     id: 59,
@@ -1096,7 +1096,7 @@ const carrerasData = [
     requisitos: "Bachillerato, interés en ciencias sociales y derecho",
     campoLaboral: "Sistema judicial, policía, prisiones, seguridad privada",
     pagina: "https://www.unl.edu.ec/criminologia",
-    imagen: "https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80"
+    imagen: "https://i0.wp.com/insunte.edu.mx/es/wp-content/uploads/2023/11/medida-pagina-web.png?fit=1200%2C675&ssl=1"
   },
   {
     id: 77,
@@ -1124,7 +1124,7 @@ const carrerasData = [
     requisitos: "Bachillerato en Ciencias, biología y química avanzadas",
     campoLaboral: "Laboratorios genéticos, investigación, salud, agricultura",
     pagina: "https://www.unl.edu.ec/genetica",
-    imagen: "https://images.unsplash.com/photo-1530026405189-8745d6f2e4f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80"
+    imagen: "https://concepto.de/wp-content/uploads/2019/04/genetica-e1554588448726.jpg"
   },
 
   // ==================== MACHALA (5 carreras adicionales) ====================
@@ -1140,7 +1140,7 @@ const carrerasData = [
     requisitos: "Bachillerato, interés en trabajo con adultos mayores",
     campoLaboral: "Hogares de ancianos, centros de día, salud pública",
     pagina: "https://www.utmachala.edu.ec/gerontologia-virtual",
-    imagen: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80"
+    imagen: "https://www.unitecoprofesional.es/blog/wp-content/uploads/2021/11/gerontologia-geriatria.jpg"
   },
   {
     id: 80,
@@ -1212,7 +1212,7 @@ const carrerasData = [
     requisitos: "Bachillerato en Ciencias, interés en rehabilitación",
     campoLaboral: "Hospitales, centros de rehabilitación, escuelas especiales",
     pagina: "https://www.utm.edu.ec/terapia-ocupacional",
-    imagen: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80"
+    imagen: "https://proactivehealthcorp.com/wp-content/uploads/2023/03/occupational-therapy-details.jpg"
   },
   {
     id: 85,
@@ -1340,7 +1340,7 @@ const carrerasData = [
     requisitos: "Bachillerato en Ciencias, biología y química avanzadas",
     campoLaboral: "Laboratorios de investigación marina, acuicultura, farmacéutica",
     pagina: "https://www.pucese.edu.ec/biotecnologia-marina",
-    imagen: "https://images.unsplash.com/photo-1530026405189-8745d6f2e4f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80"
+    imagen: "https://www.bbva.com/wp-content/uploads/2025/01/bbva-biotecnologia-azul-177442700-sostenibilidad.jpg"
   },
   {
     id: 94,
